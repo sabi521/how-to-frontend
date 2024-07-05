@@ -63,10 +63,45 @@
   src: url(../fonts/Ubuntu-Medium.ttf);
 }
 
-.sport_specific:hover h3 {
-  color: #0072eb;
+.sport_specific:hover {
+  h3 {
+    color: #0072eb;
+  }
+  p {
+    color: #282e38;
+  }
 }
 
-.sport_specific:hover p {
-  color: #282e38;
+.game_block .heading {
+  padding-right: 24px;
+  transition: padding-right 1s;
+  -moz-transition: padding-right 1s; /* Firefox */
+  -webkit-transition: padding-right 1s; /* Safari and Chrome */
+  -o-transition: padding-right 1s; /* Opera */
+}
+
+.game_block:hover .heading {
+  padding-right: 10px;
+}
+
+.game_block:hover .right_icon path {
+  stroke: blue;
+}
+
+/* .game_block .list_container {
+  li:before {
+    content: url("../img/play_arrow.svg");
+    width: 24px;
+    height: 24px;
+  }
+  li {
+    display: flex;
+    align-items: flex-start;
+  }
+} */
+
+.slider_section .tns-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

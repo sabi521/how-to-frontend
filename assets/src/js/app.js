@@ -33,4 +33,58 @@ domReady(() => {
       searchButton.classList.remove("hidden");
     }
   });
+
+  /**
+   * most_popular slider home page
+   */
+
+  var slider = tns({
+    container: ".most_popular-slider",
+    controlsText: [
+      '<img src="/assets/src/img/arrow-left.png" />',
+      '<img src="/assets/src/img/arrow-right.png" />',
+    ],
+    items: 3,
+    slideBy: "page",
+    fixedWidth: 272,
+    gutter: 24,
+    responsive: {
+      768: {
+        fixedWidth: 306,
+        gutter: 40,
+      },
+    },
+  });
+
+  var slider = tns({
+    container: ".new_article-slider",
+    controlsText: [
+      '<img src="/assets/src/img/arrow-left.png" />',
+      '<img src="/assets/src/img/arrow-right.png" />',
+    ],
+    items: 3,
+    slideBy: "page",
+    fixedWidth: 272,
+    gutter: 24,
+    responsive: {
+      768: {
+        fixedWidth: 306,
+        gutter: 40,
+      },
+    },
+  });
+
+  var slider = tns({
+    container: ".new_sportbook_slider",
+    controls: false,
+    items: 3,
+    slideBy: "page",
+    fixedWidth: 300,
+    gutter: 10,
+    responsive: {
+      768: {
+        fixedWidth: 326,
+      },
+    },
+  });
 });
