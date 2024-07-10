@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Tailwind Vanilla Boilerplate</title>
+
+    <!-- REQUIRED // Load js and css files -->
+    <script type="module" src="/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-blue-900 w-full h-16"></header>
+    <!--  Search bar-->
+    <div class="bg-slate-800 border-t border-blue-900">
+      <div class="search_bar max-w-[1430px] mx-auto py-6 px-3 xl:px-0">
+        <p
+          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+        >
+          How To Bet
+        </p>
+      </div>
+    </div>
+
+    <!--Page content-->
+
+    <div class="page_content">
+      <div class="text-center max-w-xl mx-auto px-3 lg:px-0">
+        <div class="404_image max-w-md mx-auto mt-12">
+          <img class="w-full" src="./assets/src/img/404.png" alt="404 image" />
+        </div>
+        <h1
+          class="mt-12 text-gray-800 font-nexaheavy font-black text-2xl leading-7 md:text-[32px] md:leading-[38px]"
+        >
+          Sorry, we couldn’t find that page
+        </h1>
+
+        <p class="mt-4 font-nexaregular text-lg text-gray-800 leading-5">
+          Try searching or go to the
+          <a href="#" class="text-blue-600 underline">home page</a>
+        </p>
+
+        <!--Search Component-->
+        <div class="relative mt-10 max-w-xl mx-auto">
+          <input
+            class="border border-gray-800 rounded-full w-full py-3 px-3 text-gray-800 custom-input font-roboto"
+            id="search-input"
+            type="text"
+            placeholder="NFL betting"
+          />
+          <div class="absolute right-0 inset-y-0 flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="close-icon"
+              class="close-icon -ml-1 mr-3 h-5 w-5 icon-hidden"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+            >
+              <path
+                d="M18 18.5L6 6.5M18 6.5L6 18.5"
+                stroke="#282E38"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <div
+            class="absolute left-5 inset-y-0 flex items-center"
+            id="search-icon"
+          >
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
+                stroke="#282E38"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22 22.5L20 20.5"
+                stroke="#282E38"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--example-->
+        <div class="flex gap-4 items-center mt-6">
+          <p class="font-nexaregular text-slate-500">For example:</p>
+          <a
+            href="#"
+            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black"
+            >Betting strategies</a
+          >
+          <a
+            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black"
+            href="#"
+            >Super Bowl
+          </a>
+        </div>
+      </div>
+
+      <!--Explore more section-->
+      <section
+        class="explore_more_container my-16 max-w-[996px] mx-auto px-3 lg:px-0"
+      >
+        <div class="explore_more_container">
+          <h2
+            class="mb-5 font-nexaheavy font-black text-lg text-gray-800 md:text-2xl"
+          >
+            Explore resources
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+            <div class="single_block border border-slate-200 rounded-xl pb-6">
+              <div class="image mb-3">
+                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              </div>
+              <div class="content px-6 space-y-3">
+                <h5 class="font-nexaheavy font-black text-lg text-gray-800">
+                  The Locker Room
+                </h5>
+                <p
+                  class="font-roboto font-normal text-gray-800 text-sm leading-5"
+                >
+                  Unlock expert betting news and analysis to boost your
+                  sportsbook success!
+                </p>
+                <a
+                  class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
+                  href="#"
+                  >Go to Locker Room</a
+                >
+              </div>
+            </div>
+            <div class="single_block border border-slate-200 rounded-xl pb-6">
+              <div class="image mb-3">
+                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              </div>
+              <div class="content px-6 space-y-3">
+                <h5 class="font-nexaheavy font-black text-lg text-gray-800">
+                  The Wise Guy
+                </h5>
+                <p
+                  class="font-roboto font-normal text-gray-800 text-sm leading-5"
+                >
+                  Unlock expert betting news and analysis to boost your
+                  sportsbook success!
+                </p>
+                <a
+                  class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
+                  href="#"
+                  >Go to Locker Room</a
+                >
+              </div>
+            </div>
+            <div class="single_block border border-slate-200 rounded-xl pb-6">
+              <div class="image mb-3">
+                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              </div>
+              <div class="content px-6 space-y-3">
+                <h5 class="font-nexaheavy font-black text-lg text-gray-800">
+                  BetUS TV
+                </h5>
+                <p
+                  class="font-roboto font-normal text-gray-800 text-sm leading-5"
+                >
+                  Unlock expert betting news and analysis to boost your
+                  sportsbook success!
+                </p>
+                <a
+                  class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
+                  href="#"
+                  >Go to Locker Room</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  </body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Tailwind Vanilla Boilerplate</title>
+
+    <!-- REQUIRED // Load js and css files -->
+    <script type="module" src="/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-blue-900 w-full h-16"></header>
+    <!--  Search bar-->
+    <div class="bg-slate-800 border-t border-blue-900">
+      <div class="search_bar max-w-[1430px] mx-auto py-6 px-3 xl:px-0">
+        <p
+          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+        >
+          How To Bet
+        </p>
+      </div>
+    </div>
+
+    <!--Page content-->
+    <div class="page_content">
+      <div class="page_inner_container max-w-[1430px] mx-auto px-3 xl:px-0">
+        <div
+          class="w-full flex flex-col gap-4 lg:mt-5 lg:flex-row lg:gap-12 xl:gap-28"
+        >
+          <div class="max-w-[278px] order-2 lg:order-1">
+            <!--Trending tags container-->
+            <div class="trending_tags_container lg:mt-10">
+              <h5
+                class="text-gray-800 font-roboto font-bold leading-5 text-sm mb-2"
+              >
+                Trending Tags
+              </h5>
+              <div
+                class="tags text-gray-800 font-nexabold font-bold text-sm flex flex-wrap gap-2"
+              >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+              </div>
+            </div>
+          </div>
+          <!--How to bet content container-->
+          <div
+            class="main_container max-w-[680px] w-full mt-5 order-1 lg:order-2 lg:mt-0"
+          >
+            <div
+              class="title_bar capitalize flex flex-wrap gap-2 items-center px-3 lg:px-0"
+            >
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-roboto text-base text-blue-600"
+              >
+                <span>How To Bet</span></a
+              >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                  stroke="#1D2129"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <p class="font-roboto text-base text-neutral-800">
+                Search “NFL betting”
+              </p>
+            </div>
+
+            <div class="content mt-5">
+              <h1
+                class="font-nexaheavy font-black text-gray-800 text-2xl leading-8 px-3 lg:px-0 md:leading-12 md:text-[32px]"
+              >
+                Search “NFL betting”
+              </h1>
+
+              <!--Search Component-->
+              <div class="relative mt-6">
+                <input
+                  class="border border-gray-800 rounded-full w-full py-3 px-3 text-gray-800 custom-input font-roboto"
+                  id="search-input"
+                  type="text"
+                  placeholder="NFL betting"
+                />
+                <div class="absolute right-0 inset-y-0 flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="close-icon"
+                    class="close-icon -ml-1 mr-3 h-5 w-5 icon-hidden"
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M18 18.5L6 6.5M18 6.5L6 18.5"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  class="absolute left-5 inset-y-0 flex items-center"
+                  id="search-icon"
+                >
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5 21.5C16.7467 21.5 21 17.2467 21 12C21 6.75329 16.7467 2.5 11.5 2.5C6.25329 2.5 2 6.75329 2 12C2 17.2467 6.25329 21.5 11.5 21.5Z"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 22.5L20 20.5"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!--Search Filter-->
+              <div
+                class="search_by flex gap-4 items-center font-nexaheavy font-black text-slate-500 mt-6"
+              >
+                <a
+                  href="#"
+                  class="block active:underline text-neutral-800 hover:border-b-2 hover:border-neutral-800"
+                  >Search by Keyword</a
+                >
+                <a
+                  class="block hover:border-b-2 hover:border-neutral-800 hover:text-neutral-800"
+                  href="#"
+                  >Search by tag
+                </a>
+              </div>
+
+              <!--Search Filter Container-->
+              <div
+                class="search_filter_container mt-6 border-y py-4 border-slate-200"
+              >
+                <div class="flex flex-wrap gap-6">
+                  <div class="flex items-center">
+                    <input
+                      id="default-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+                    />
+                    <label
+                      for="default-checkbox"
+                      class="ms-2 font-roboto text-gray-800"
+                      >All Sections</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      checked
+                      id="checked-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+                    />
+                    <label
+                      for="checked-checkbox"
+                      class="ms-2 font-roboto text-gray-800"
+                      >Sport-Specific Guides</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      checked
+                      id="checked-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+                    />
+                    <label
+                      for="checked-checkbox"
+                      class="ms-2 font-roboto text-gray-800"
+                      >Bets Types & Odds</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      checked
+                      id="checked-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+                    />
+                    <label
+                      for="checked-checkbox"
+                      class="ms-2 font-roboto text-gray-800"
+                      >Betting Strategies</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      checked
+                      id="checked-checkbox"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
+                    />
+                    <label
+                      for="checked-checkbox"
+                      class="ms-2 font-roboto text-gray-800"
+                      >Terms</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!--Result Container-->
+              <div class="result_container mt-6">
+                <div
+                  class="result_header font-roboto text-sm flex justify-between items-center"
+                >
+                  <p>46 results for: “NFL betting”</p>
+
+                  <button
+                    id="dropdownDefaultButton"
+                    data-dropdown-toggle="dropdown"
+                    class="px-5 py-2.5 text-center inline-flex items-center"
+                    type="button"
+                  >
+                    Sort By:
+                    <span class="text-gray-800 font-bold"> New First</span>
+                    <svg
+                      class="w-2.5 h-2.5 ms-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Dropdown 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Dropdown 2</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!--Results content Container-->
+                <div class="search_results_container">
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content_block border-b border-slate-200 py-6">
+                    <!--Result Breadcrumbs-->
+                    <div class="result_breadcrumbs">
+                      <div
+                        class="breadcrumbs font-roboto text-slate-500 flex items-center flex-wrap gap-2"
+                      >
+                        <a href="">How to bet</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="#">Bets Types & Odds</a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                        >
+                          <path
+                            d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                            stroke="#1D2129"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <a href="">Analyzing Data and Statistics</a>
+                      </div>
+                    </div>
+
+                    <div class="content flex items-center gap-5 mt-3">
+                      <div class="w-[497px]">
+                        <h3
+                          class="font-nexaheavy font-black text-lg text-blue-600 mb-3"
+                        >
+                          Statistical Models
+                        </h3>
+                        <p
+                          class="font-roboto text-base leading-6 text-gray-800 line-clamp-2"
+                        >
+                          Let’s take the 2022 AFC Championship game as an
+                          example. In that game, the Kansas City Chiefs hosted
+                          the Cincinnati Bengals in Arrowhead Stadium. Our model
+                          first gathered each team’s Passing Yards For/Against,
+                          Rushing Yards For/Against, Takeaways and Giveaways and
+                          created our expected values based on the formulas
+                          shown above:
+                        </p>
+                      </div>
+                      <div class="imagen w-36 h-20">
+                        <img
+                          class="w-full h-full cover"
+                          src="/assets/src/img/img.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Pagination-->
+                <nav aria-label="Page navigation " class="font-roboto my-8">
+                  <ul
+                    class="list-style-none flex justify-center lg:justify-start"
+                  >
+                    <li>
+                      <a
+                        class="relative flex items-center gap-1 rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-neutral-100 focus:bg-neutral-100 hover:text-blue-600 focus:text-blue-600 focus:outline-none active:bg-neutral-100 active:text-blue-600 icon-hover"
+                        href="#"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.2803 12.7803C9.98744 13.0732 9.51256 13.0732 9.21967 12.7803L4.96967 8.53033C4.67678 8.23744 4.67678 7.76256 4.96967 7.46967L9.21967 3.21967C9.51256 2.92678 9.98744 2.92678 10.2803 3.21967C10.5732 3.51256 10.5732 3.98744 10.2803 4.28033L6.56066 8L10.2803 11.7197C10.5732 12.0126 10.5732 12.4874 10.2803 12.7803Z"
+                            fill="#4B5567"
+                          />
+                        </svg>
+                        <span>Previous</span></a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
+                        href="#"
+                        >1</a
+                      >
+                    </li>
+                    <li aria-current="page">
+                      <a
+                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
+                        href="#"
+                        >2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
+                        href="#"
+                        >3</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative flex items-center gap-1 rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-neutral-100 focus:bg-neutral-100 hover:text-blue-600 focus:text-blue-600 focus:outline-none active:bg-neutral-100 active:text-blue-600 icon-hover"
+                        href="#"
+                        ><span>Next</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M6.71967 3.21967C7.01256 2.92678 7.48744 2.92678 7.78033 3.21967L12.0303 7.46967C12.3232 7.76256 12.3232 8.23744 12.0303 8.53033L7.78033 12.7803C7.48744 13.0732 7.01256 13.0732 6.71967 12.7803C6.42678 12.4874 6.42678 12.0126 6.71967 11.7197L10.4393 8L6.71967 4.28033C6.42678 3.98744 6.42678 3.51256 6.71967 3.21967Z"
+                            fill="#4B5567"
+                          /></svg
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <!--Realted articles container for Desktop-->
+          <div
+            class="related_articles_container w-1/4 hidden xl:block order-3"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  </body>
+</html>

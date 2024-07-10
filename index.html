@@ -86,30 +86,29 @@
           data-tabs-toggle="#sportsTabContent"
           role="tablist"
         >
-          <div role="presentation">
-            <div
-              class="cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600 active"
-              id="sport1-tab"
-              data-tabs-target="#sport1"
-              role="tab"
-              aria-controls="sport1"
-              aria-selected="true"
+          <a
+            class="block cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600 active"
+            id="sport1-tab"
+            data-tabs-target="#sport1"
+            role="tab"
+            aria-controls="sport1"
+            aria-selected="true"
+          >
+            <img
+              class="block mx-auto"
+              src="./assets/src/img/rugby.png"
+              alt="game image"
+            />
+            <h3
+              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
             >
-              <img
-                class="block mx-auto"
-                src="./assets/src/img/rugby.png"
-                alt="game image"
-              />
-              <h3
-                class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
-              >
-                Sport-Specific Guides
-              </h3>
-              <p class="text-slate-500 font-roboto text-xs md:text-sm">
-                NFL, NBA, Baseball and more
-              </p>
-            </div>
-          </div>
+              Sport-Specific Guides
+            </h3>
+            <p class="text-slate-500 font-roboto text-xs md:text-sm">
+              NFL, NBA, Baseball and more
+            </p>
+          </a>
+
           <div role="presentation">
             <div
               class="cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
@@ -187,6 +186,7 @@
         </div>
       </div>
       <div id="sportsTabContent">
+        <!--Section 1: Sport-Specific Guides-->
         <section
           class=""
           id="sport1"
@@ -587,7 +587,7 @@
           </div>
         </section>
 
-        <!--Sports 2-->
+        <!--Section 2: Bet types and odds-->
         <section
           class="hidden"
           id="sport2"
@@ -809,7 +809,7 @@
           </div>
         </section>
 
-        <!--Sports 3-->
+        <!--Section 3: Betting Strategies-->
         <section
           class="hidden"
           id="sport3"
@@ -1031,7 +1031,7 @@
           </div>
         </section>
 
-        <!--Sports 4-->
+        <!--Section 4: Terms-->
         <section
           class="hidden"
           id="sport4"
@@ -2016,9 +2016,7 @@
         >
           Explore more resources
         </h2>
-        <div
-          class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5"
-        >
+        <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
           <div class="single_block border border-slate-200 rounded-xl pb-6">
             <div class="image mb-3">
               <img class="w-full" src="./assets/src/img/lr.png" alt="image" />

@@ -105,3 +105,21 @@
   top: 0;
   right: 0;
 }
+
+/* CSS to hide scrollbar */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.custom-input::placeholder {
+  padding-left: 40px;
+  color: #282e38;
+}
+
+.icon-hover:hover path {
+  fill: #0072eb;
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite Tailwind Vanilla Boilerplate</title>
+
+    <!-- REQUIRED // Load js and css files -->
+    <script type="module" src="/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-blue-900 w-full h-16"></header>
+    <!--  Search bar-->
+    <div class="bg-slate-800 border-t border-blue-900">
+      <div
+        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-6 px-3 xl:px-0"
+      >
+        <p
+          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+        >
+          How To Bet
+        </p>
+
+        <form action="" class="max-w-[278px] px-4 text-white h-12">
+          <div class="relative">
+            <input
+              type="text"
+              name="q"
+              class="w-full border h-12 shadow p-4 rounded-[32px] bg-[#223466] border-slate-500"
+              placeholder="search"
+            />
+            <button type="submit">
+              <svg
+                class="h-5 w-5 absolute top-3.5 right-3 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 56.966 56.966"
+                style="enable-background: new 0 0 56.966 56.966"
+                xml:space="preserve"
+              >
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Page content-->
+    <div class="page_content">
+      <div class="page_inner_container max-w-[1430px] mx-auto px-3 xl:px-0">
+        <div class="w-full flex flex-col gap-24 mt-5 xl:flex-row">
+          <div class="w-1/4 hidden xl:block"></div>
+          <!--How to bet content container-->
+          <div class="main_container max-w-[680px] mx-auto">
+            <div
+              class="title_bar capitalize flex flex-wrap gap-2 items-center px-3 lg:px-0"
+            >
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 font-nexaheavy font-black text-base text-neutral-800 border border-slate-400 rounded-full px-2 py-1"
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.75007 11.62L4.94674 7.81667C4.49757 7.3675 4.49757 6.6325 4.94674 6.18334L8.75007 2.38"
+                    stroke="#252A32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>How To Bet</span></a
+              >
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                  stroke="#1D2129"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <div class="terms_types">
+                <button
+                  id="dropdownDefaultButton"
+                  data-dropdown-toggle="dropdown"
+                  class="text-center inline-flex items-center font-roboto text-base leading-6 text-gray-800"
+                  type="button"
+                >
+                  Terms
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.8335 7.91663L10.0002 12.0833L14.1668 7.91663H5.8335Z"
+                      fill="#1D2129"
+                    />
+                  </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdown"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    class="py-2 text-sm text-neutral-800 font-roboto"
+                    aria-labelledby="dropdownDefaultButton"
+                  >
+                    <li>
+                      <a href="#" class="block px-4 py-2 border-b"
+                        >Sport Specific Guides</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 border-b"
+                        >Bet Types & Odds</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 border-b"
+                        >Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2">Terms</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.45508 9.96004L7.71508 6.70004C8.10008 6.31504 8.10008 5.68504 7.71508 5.30004L4.45508 2.04004"
+                  stroke="#1D2129"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <p class="font-roboto text-base text-neutral-800">Terms</p>
+            </div>
+
+            <div class="content mt-5">
+              <h1
+                class="font-nexaheavy font-black text-gray-800 text-2xl leading-8 px-3 lg:px-0 md:leading-12 md:text-[40px]"
+              >
+                Terms
+              </h1>
+
+              <div class="block w-full mt-4 xl:hidden">
+                <select
+                  id="countries"
+                  class="h-12 font-roboto border border-slate-300 text-gray-800 text-base rounded-lg block w-full py-2.5 px-4 focus:outline-none"
+                >
+                  <option
+                    selected
+                    class="text-gray-800 font-nexaheavy font-black border-t pt-2 mt-2"
+                  >
+                    In this article
+                  </option>
+                  <option value="">A-E</option>
+                  <option value="">F-J</option>
+                  <option value="">K-O</option>
+                  <option value="">P-T</option>
+                  <option value="">U-Z</option>
+                </select>
+              </div>
+
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  A
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Accumulator (Parlay):</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Against the Spread (ATS):</strong>
+                    A single bet that links together two or more individual
+                    bets. All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Arbitrage Betting:</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Asian Handicap:</strong> A single
+                    bet that links together two or more individual bets. All
+                    selections must win for the bet to be successful.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  B
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Bankroll:</strong> The total
+                    amount of money a bettor has set aside for betting.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Betting Exchange:</strong>
+                    A platform where bettors can bet against each other rather
+                    than against a bookmaker.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Bookmaker (Bookie):</strong> An
+                    individual or organization that accepts and pays out bets on
+                    various events, setting the odds and taking a commission to
+                    ensure profit.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  C
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Accumulator (Parlay):</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Against the Spread (ATS):</strong>
+                    A single bet that links together two or more individual
+                    bets. All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Arbitrage Betting:</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Asian Handicap:</strong> A single
+                    bet that links together two or more individual bets. All
+                    selections must win for the bet to be successful.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Realted articles container for Desktop-->
+          <div class="related_articles_container w-1/4 hidden xl:block">
+            <div class="related_articles">
+              <h4 class="font-nexaheavy font-black text-gray-800 mb-4">
+                Related Articles
+              </h4>
+              <ul
+                class="font-roboto text-base text-blue-600 list-disc space-y-2 pl-4"
+              >
+                <li>
+                  <a href="#" class="underline">Point Spread: Explained</a>
+                </li>
+                <li><a href="#" class="underline">Point Spreads Tips</a></li>
+                <li>
+                  <a href="#" class="underline"
+                    >What Every Bettor Should Know</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-96">
+              <select
+                multiple=""
+                id="countries"
+                class="font-roboto text-base bg-gray-50 border border-slate-300 text-slate-500 rounded-xl block w-full p-2.5 h-40 no-scrollbar"
+              >
+                <option value="">A-E</option>
+                <option value="">F-J</option>
+                <option value="">K-O</option>
+                <option value="">P-T</option>
+                <option value="">U-Z</option>
+                <option
+                  value=""
+                  class="text-gray-800 font-nexaheavy font-black border-t pt-2 mt-2"
+                  disabled
+                >
+                  In this article
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Advertisement-->
+      <div
+        class="adv mt-10 w-full h-60 bg-slate-200 flex justify-center items-center"
+      >
+        ADV
+      </div>
+
+      <div class="max-w-[1430px] mx-auto px-3 xl:px-0">
+        <div class="w-full flex flex-col mt-5 gap-6 xl:flex-row xl:gap-24">
+          <div class="w-1/4 hidden xl:block"></div>
+          <!--How to bet content container-->
+          <div class="main_container max-w-[680px] mx-auto">
+            <div class="content mt-5">
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  G
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Accumulator (Parlay):</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Against the Spread (ATS):</strong>
+                    A single bet that links together two or more individual
+                    bets. All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Arbitrage Betting:</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Asian Handicap:</strong> A single
+                    bet that links together two or more individual bets. All
+                    selections must win for the bet to be successful.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  H
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Bankroll:</strong> The total
+                    amount of money a bettor has set aside for betting.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Betting Exchange:</strong>
+                    A platform where bettors can bet against each other rather
+                    than against a bookmaker.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Bookmaker (Bookie):</strong> An
+                    individual or organization that accepts and pays out bets on
+                    various events, setting the odds and taking a commission to
+                    ensure profit.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-10 px-3 lg:px-0">
+                <h2
+                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                >
+                  I
+                </h2>
+
+                <div
+                  class="space-y-4 font-roboto text-gray-800 text-lg leading-6 md:text-xl md:leading-7"
+                >
+                  <p>
+                    <strong class="font-bold">Accumulator (Parlay):</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Against the Spread (ATS):</strong>
+                    A single bet that links together two or more individual
+                    bets. All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Arbitrage Betting:</strong> A
+                    single bet that links together two or more individual bets.
+                    All selections must win for the bet to be successful.
+                  </p>
+
+                  <p>
+                    <strong class="font-bold">Asian Handicap:</strong> A single
+                    bet that links together two or more individual bets. All
+                    selections must win for the bet to be successful.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--Realted articles container for Mobile-->
+            <div class="related_articles mt-6 pl-4 block xl:hidden">
+              <h4 class="font-nexaheavy font-black text-gray-800 mb-4">
+                Related Articles
+              </h4>
+              <ul
+                class="font-roboto text-base text-blue-600 list-disc space-y-2 pl-4"
+              >
+                <li>
+                  <a href="#" class="underline">Point Spread: Explained</a>
+                </li>
+                <li><a href="#" class="underline">Point Spreads Tips</a></li>
+                <li>
+                  <a href="#" class="underline"
+                    >What Every Bettor Should Know</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!--Go to sportsbook container-->
+            <div class="flex flex-col items-center sm:flex-row gap-2 mt-10">
+              <svg
+                width="82"
+                height="76"
+                viewBox="0 0 82 76"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g style="mix-blend-mode: darken">
+                  <rect
+                    width="82"
+                    height="76"
+                    fill="url(#pattern0_1029_11759)"
+                  />
+                </g>
+                <defs>
+                  <pattern
+                    id="pattern0_1029_11759"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_1029_11759"
+                      transform="matrix(0.00286233 0 0 0.0030883 -0.364422 -0.434211)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_1029_11759"
+                    width="604"
+                    height="605"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlwAAAJdCAYAAADnQKkVAAAAAXNSR0IArs4c6QAAIABJREFUeF7t3fuvZed50PFn7X1uc5/x2B47mcRJHCduWkyb0AZaArUUV7SEtkLiplKkIiFVSIUfkei/gFqJX0AFVQIJSgO9QOOqCJo0XEpaN24TE0wc2yE317exZzy3c90LrbXPmTl2YnfmxO/jM+f5nMiyM3PO++73874/fLX2Omt3s9msD18ECBAgQIAAAQLNBDrB1czWwAQIECBAgACBUUBwOQgECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBAgQIAAAcHlDBAgQIAAAQIEGgsIrsbAhidAgAABAgQICC5ngAABAgQIECDQWEBwNQY2PAECBAgQIEBAcDkDBAgQIECAAIHGAoKrMbDhCRAgQIAAAQKCyxkgQIAAAQIECDQWEFyNgQ1PgAABAgQIEBBczgABAgQIECBAoLGA4GoMbHgCBAgQIECAgOByBggQIECAAAECjQUEV2NgwxMgQIAAAQIEBJczQIAAAQIECBBoLCC4GgMbngABAgQIECAguJwBAgQIECBAgEBjAcHVGNjwBAgQIECAAAHB5QwQIECAAAECBBoLCK7GwIYnQIAAAQIECAguZ4AAAQIECBAg0FhAcDUGNjwBAgQIECBAQHA5AwQIECBAgACBxgKCqzGw4QkQIECAAAECgssZIECAAAECBAg0FhBcjYENT4AAAQIECBAQXM4AAQIECBAgQKCxgOBqDGx4AgQIECBAgIDgcgYIECBAgAABAo0FBFdjYMMTIECAAAECBASXM0CAAAECBAgQaCwguBoDG54AAQIECBAgILicAQIECBAgQIBAYwHB1RjY8AQIECBAgAABweUMECBAgAABAgQaCwiuxsCGJ0CAAAECBAgILmeAAAECBAgQINBYQHA1BjY8AQIECBAgQEBwOQMECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBAgQIAAAcHlDBAgQIAAAQIEGgsIrsbAhidAgAABAgQICC5ngAABAgQIECDQWEBwNQY2PAECBAgQIEBAcDkDBAgQIECAAIHGAoKrMbDhCRAgQIAAAQKCyxkgQIAAAQIECDQWEFyNgQ1PgAABAgQIEBBczgABAgQIECBAoLGA4GoMbHgCBAgQIECAgOByBggQIECAAAECjQUEV2NgwxMgQIAAAQIEBJczQIAAAQIECBBoLCC4GgMbngABAgQIECAguJwBAgQIECBAgEBjAcHVGNjwBAgQIECAAAHB5QwQIECAAAECBBoLCK7GwIYnQIAAAQIECAguZ4AAAQIECBAg0FhAcDUGNjwBAgQIECBAQHA5AwQIECBAgACBxgKCqzGw4QkQIECAAAECgssZIECAAAECBAg0FhBcjYENT4AAAQIECBAQXM4AAQIECBAgQKCxgOBqDGx4AgQIECBAgIDgcgYIECBAgAABAo0FBFdjYMMTIECAAAECBASXM0CAAAECBAgQaCwguBoDG54AAQIECBAgILicAQIECBAgQIBAYwHB1RjY8AQIECBAgAABweUMECBAgAABAgQaCwiuxsCGJ0CAAAECBAgILmeAAAECBAgQINBYQHA1BjY8AQIECBAgQEBwOQMECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBAgQIAAAcHlDBAgQIAAAQIEGgsIrsbAhidAgAABAgQICC5ngAABAgQIECDQWEBwNQY2PAECBAgQIEBAcDkDBAgQIECAAIHGAoKrMbDhCRAgQIAAAQKCyxkgQIAAAQIECDQWEFyNgQ1PgAABAgQIEBBczgABAgQIECBAoLGA4GoMbHgCBAgQIECAgOByBggQIECAAAECjQUEV2NgwxMgQIAAAQIEBJczQIAAAQIECBBoLCC4GgMbngABAgQIECAguJwBAgQIECBAgEBjAcHVGNjwBAgQIECAAAHB5QwQIECAAAECBBoLCK7GwIYnQIAAAQIECAguZ4AAAQIECBAg0FhAcDUGNjwBAgQIECBAQHA5AwQIECBAgACBxgKCqzGw4QkQIECAAAECgssZIECAAAECBAg0FhBcjYENT4AAAQIECBAQXM4AAQIECBAgQKCxgOBqDGx4AgQIECBAgIDgcgYIECBAgAABAo0FBFdjYMMTIECAAAECBASXM0CAAAECBAgQaCwguBoDG54AAQIECBAgILicAQIECBAgQIBAYwHB1RjY8AQIECBAgAABweUMECBAgAABAgQaCwiuxsCGJ0CAAAECBAgILmeAAAECBAgQINBYQHA1BjY8AQIECBAgQEBwOQMECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBAgQIAAAcHlDBAgQIAAAQIEGgsIrsbAhidAgAABAgQICC5ngAABAgQIECDQWEBwNQY2PAECBAgQIEBAcDkDBAgQIECAAIHGAoKrMbDhCRAgQIAAAQKCyxkgQIAAAQIECDQWEFyNgQ1PgAABAgQIEBBczgABAgQIECBAoLGA4GoMbHgCBAgQIECAgOByBggQIECAAAECjQUEV2NgwxMgQIAAAQIEBJczQIAAAQIECBBoLCC4GgMbngABAgQIECAguJwBAgQIECBAgEBjAcHVGNjwBAgQIECAAAHB5QwQIECAAAECBBoLCK7GwIYnQIAAAQIECAguZ4AAAQIECBAg0FhAcDUGNjwBAgQIECBAQHA5AwQIECBAgACBxgKCqzGw4QkQIECAAAECgssZIECAAAECBAg0FhBcjYENT4AAAQIECBAQXM4AAQIECBAgQKCxgOBqDGx4AgQIECBAgIDgcgYIECBAgAABAo0FBFdjYMMTIECAAAECBASXM0CAAAECBAgQaCwguBoDG54AAQIECBAgILicAQIECBAgQIBAYwHB1RjY8AQIECBAgAABweUMECBAgAABAgQaCwiuxsCGJ0CAAAECBAgILmeAAAECBAgQINBYQHA1BjY8AQIECBAgQEBwOQMECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBAgQIAAAcHlDBAgQIAAAQIEGgsIrsbAhidAgAABAgQICC5ngAABAgQIECDQWEBwNQY2PAECBAgQIEBAcDkDBAgQIECAAIHGAoKrMbDhCRAgQIAAAQKCyxkgQIAAAQIECDQWEFyNgQ1PgAABAgQIEBBczgABAgQIECBAoLGA4GoMbHgCBAgQIECAgOByBggQIECAAAECjQUEV2NgwxMgQIAAAQIEBJczQIAAAQIECBBoLCC4GgMbngABAgQIECAguJwBAgQIECBAgEBjAcHVGNjwBAgQIECAAAHB5QwQIECAAAECBBoLCK7GwIYnQIAAAQIECAguZ4AAAQIECBAg0FhAcDUGNjwBAgQIECBAQHA5AwQIECBAgACBxgKCqzGw4QkQIECAAAECgssZIECAAAECBAg0FhBcjYENT4AAAQIECBAQXM4AAQIECBAgQKCxgOBqDGx4AgQIECBAgIDgcgYIECBAgAABAo0FBFdjYMMTIECAAAECBASXM0CAAAECBAgQaCwguBoDG54AAQIECBAgILicAQIECBAgQIBAYwHB1RjY8AQIECBAgAABweUMECBAgAABAgQaCwiuxsCGJ0CAAAECBAgILmeAAAECBAgQINBYQHA1BjY8AQIECBAgQEBwOQMECBAgQIAAgcYCgqsxsOEJECBAgAABAoLLGSBAgAABAgQINBYQXI2BDU+AAAECBAgQEFzOAAECBAgQIECgsYDgagxseAIECBAgQICA4HIGCBAgQIAAAQKNBQRXY2DDEyBAgAABAgQElzNAgAABAgQIEGgsILgaAxueAAECBAgQICC4nAECBAgQIECAQGMBwdUY2PAECBxcgX57ad32v/uY/0kXO3/yZq39tTO9WeMahwCBLAHBlSVtHgIEDpTATgJdX9Sr/2QeXddTbO+Lf+1Mb3bM7f2V+UkCBG5c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gAABAiUFBFfJbbdoAgQIECBAIFNAcGVqm4sAAQIECBAoKSC4Sm67RRMgQIAAAQKZAoIrU9tcBAgQIECAQEkBwVVy2y2aAAECBAgQyBQQXJna5iJAgAABAgRKCgiukttu0QQIECBAgECmgODK1DYXAQIECBAgUFJAcJXcdosmQIAAAQIEMgUEV6a2uQgQIECAAIGSAoKr5LZbNAECBAgQIJApILgytc1FgAABAgQIlBQQXCW33aIJECBAgACBTAHBlaltLgIECBAgQKCkgOAque0WTYAAAQIECGQKCK5MbXMRIECAAAECJQUEV8ltt2gCBAgQIEAgU0BwZWqbiwABAgQIECgpILhKbrtFEyBAgAABApkCgitT21wECBAgQIBASQHBVXLbLZoAAQIECBDIFBBcmdrmIkCAAAECBEoKCK6S227RBAgQIECAQKaA4MrUNhcBAgQIECBQUkBwldx2iyZAgAABAgQyBQRXpra5CBAgQIAAgZICgqvktls0AQIECBAgkCkguDK1zUWAAAECBAiUFBBcJbfdogkQIECAAIFMAcGVqW0uAgQIECBAoKSA4Cq57RZNgAABAgQIZAoIrkxtcxEgQIAAAQIlBQRXyW23aAIECBAgQCBTQHBlapuLAAECBAgQKCkguEpuu0UTIECAAAECmQKCK1PbXAQIECBAgEBJAcFVctstmgABAgQIEMgUEFyZ2uYiQIAAAQIESgoIrpLbbtEECBAgQIBApoDgytQ2FwECBAgQIFBSQHCV3HaLJkCAAAECBDIFBFemtrkIECBAgACBkgKCq+S2WzQBAgQIECCQKSC4MrXNRYAAAQIECJQUEFwlt92iCRAgQIAAgUwBwZWpbS4CBAgQIECgpIDgKrntFk2AAAECBAhkCgiuTG1zESBAgAABAiUFBFfJbbdoAgQIECBAIFNAcGVqm4sAAQIECBAoKSC4Sm67RRMgQIAAAQKZAoIrU9tcBAgQIECAQEkBwVVy2y2aAAECBAgQyBQQXJna5iJAgAABAgRKCgiukttu0QQIECBAgECmgODK1DYXAQIECBAgUFJAcJXcdosmQIAAAQIEMgUEV6a2uQgQIECAAIGSAoKr5LZbNAECBAgQIJApILgytc1FgAABAgQIlBQQXCW33aIJECBAgACBTAHBlaltLgIECBAgQKCkgOAque0WTYAAAQIECGQKCK5MbXMRIECAAAECJQUEV8ltt2gCBAgQIEAgU0BwZWqbiwABAgQIECgpILhKbrtFEyBAgAABApkCgitT21wECBAgQIBASQHBVXLbLZoAAQIECBDIFBBcmdrmIkCAAAECBEoKCK6S227RBAgQIECAQKaA4MrUNhcBAgQIECBQUkBwldx2iyZAgAABAgQyBQRXpra5CBAgQIAAgZICgqvktls0AQIECBAgkCkguDK1zUWAAAECBAiUFBBcJbfdogkQIECAAIFMAcGVqW0uAgQIECBAoKSA4Cq57RZNgAABAgQIZAoIrkxtcxEgQIAAAQIlBQRXyW23aAIECBAgQCBTQHBlapuLAAECBAgQKCkguEpuu0UTIECAAAECmQKCK1PbXAQIECBAgEBJAcFVctstmgABAgQIEMgUEFyZ2uYiQIAAAQIESgoIrpLbbtEECBAgQIBApoDgytQ2FwECBAgQIFBSQHCV3HaLJkCAAAECBDIFBFemtrkIECBAgACBkgKCq+S2WzQBAgQIECCQKSC4MrXNRYAAAQIECJQUEFwlt92iCRAgQIAAgUwBwZWpbS4CBAgQIECgpIDgKrntFk2AAAECBAhkCgiuTG1zESBAgAABAiUFBFfJbbdoAgQIECBAIFNAcGVqm4sAAQIECBAoKSC4Sm67RRMgQIAAAQKZAoIrU9tcBAgQIECAQEkBwVVy2y2aAAECBAgQyBQQXJna5iJAgAABAgRKCgiukttu0QQIECBAgECmgODK1DYXAQIECBAgUFJAcJXcdosmQIAAAQIEMgUEV6a2uQgQIECAAIGSAoKr5LZbNAECBAgQIJApILgytc1FgAABAgQIlBQQXCW33aIJECBAgACBTAHBlaltLgIECBAgQKCkgOAque0WTYAAAQIECGQKCK5MbXMRIECAAAECJQUEV8ltt2gCBAgQIEAgU0BwZWqbiwABAgQIECgpILhKbrtFEyBAgAABApkCgitT21wECBAgQIBASQHBVXLbLZoAAQIECBDIFBBcmdrmIkCAAAECBEoKCK6S227RBAgQIECAQKaA4MrUNhcBAgQIECBQUkBwldx2iyZAgAABAgQyBQRXpra5CBAgQIAAgZICgqvktls0AQIECBAgkCkguDK1zUWAAAECBAiUFBBcJbfdogkQIECAAIFMAcGVqW0uAgQIECBAoKSA4Cq57RZNgAABAgQIZAoIrkxtcxEgQIAAAQIlBQRXyW23aAIECBAgQCBTQHBlapuLAAECBAgQKCkguEpuu0UTIECAAAECmQKCK1PbXAQIECBAgEBJAcFVctstmgABAgQIEMgUEFyZ2uYiQIAAAQIESgoIrpLbbtEECBAgQIBApoDgytQ2FwECBAgQIFBSQHCV3HaLJkCAAAECBDIFBFemtrkIECBAgACBkgKCq+S2WzQBAgQIECCQKSC4MrXNRYAAAQIECJQUEFwlt92iCRAgQIAAgUwBwZWpbS4CBAgQIECgpIDgKrntFk2AAAECBAhkCgiuTG1zESBAgAABAiUFBFfJbbdoAgQIECBAIFNAcGVqm4sAAQIECBAoKSC4Sm67RRMgQIAAAQKZAoIrU9tcBAgQIECAQEkBwVVy2y2aAAECBAgQyBQQXJna5iJAgAABAgRKCgiukttu0QQIECBAgECmgODK1DYXAQIECBAgUFJAcJXcdosmQIAAAQIEMgUEV6a2uQgQIECAAIGSAoKr5LZbNAECBAgQIJApILgytc1FgAABAgQIlBQQXCW33aIJECBAgACBTAHBlaltLgIECBAgQKCkgOAque0WTYAAAQIECGQKCK5MbXMRIECAAAECJQUEV8ltt2gCBAgQIEAgU0BwZWqbiwABAgQIECgpILhKbrtFEyBAgAABApkCgitT21wECBAgQIBASQHBVXLbLZoAAQIECBDIFBBcmdrmIkCAAAECBEoKCK6S227RBAgQIECAQKaA4MrUNhcBAgQIECBQUkBwldx2iyZAgAABAgQyBQRXpra5CBAgQIAAgZICgqvktls0AQIECBAgkCkguDK1zUWAAAECBAiUFBBcJbfdogkQIECAAIFMAcGVqW0uAgQIECBAoKSA4Cq57RZNgAABAgQIZAoIrkxtcxEgQIAAAQIlBQRXyW23aAIECBAgQCBTQHBlapuLAAECBAgQKCkguEpuu0UTIECAAAECmQKCK1PbXAQIECBAgEBJAcFVctstmgABAgQIEMgUEFyZ2uYiQIAAAQIESgoIrpLbbtEECBAgQIBApoDgytQ2FwECBAgQIFBSQHCV3HaLJkCAAAECBDIFBFemtrkIECBAgACBkgKCq+S2WzQBAgQIECCQKSC4MrXNRYAAAQIECJQUEFwlt92iCRAgQIAAgUwBwZWpbS4CBAgQIECgpIDgKrntFk2AAAECBAhkCgiuTG1zESBAgAABAiUFBFfJbbdoAgQIECBAIFNAcGVqm4sAAQIECBAoKSC4Sm67RRMgQIAAAQKZAoIrU9tcBAgQIECAQEkBwVVy2y2aAAECBAgQyBQQXJna5iJAgAABAgRKCvx/Vpjxljy2G40AAAAASUVORK5CYII="
+                  />
+                </defs>
+              </svg>
+
+              <div class="block text-center sm:text-left">
+                <h4
+                  class="text-gray-800 font-nexaheavy font-black text-2xl leading-7 mb-3"
+                >
+                  Now you know more about the Point Spread!
+                </h4>
+                <p class="text-gray-800 font-roboto text-xl leading-[30px]">
+                  Don’t waste time — practice your knowledge now!
+                </p>
+                <a
+                  href="#"
+                  class="block w-44 mt-5 font-nexaheavy font-black text-base leading-5 text-center text-white bg-blue-600 rounded-full px-4 py-2 mx-auto sm:mx-0"
+                  >Go to Sportsbook</a
+                >
+              </div>
+            </div>
+
+            <!--Was it Helpful container-->
+            <div
+              class="help_container mt-10 border border-slate-200 rounded-xl py-6 px-4 md:px-12"
+            >
+              <div
+                class="text-gray-800 font-nexaheavy font-black leading-5 text-lg flex flex-col gap-4 justify-between items-center md:text-2xl md:leading-7 md:flex-row"
+              >
+                <h4>Was it helpful?</h4>
+                <div class="flex gap-4 border rounded-md h-10 px-3">
+                  <p class="inline-flex items-center gap-1">
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.7334 15.2916L9.31673 17.2916C9.65006 17.6249 10.4001 17.7916 10.9001 17.7916H14.0667C15.0667 17.7916 16.1501 17.0416 16.4001 16.0416L18.4001 9.95823C18.8167 8.79156 18.0667 7.79156 16.8167 7.79156H13.4834C12.9834 7.79156 12.5667 7.37489 12.6501 6.79156L13.0667 4.12489C13.2334 3.37489 12.7334 2.54156 11.9834 2.29156C11.3167 2.04156 10.4834 2.37489 10.1501 2.87489L6.7334 7.95823"
+                        stroke="#282E38"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M2.4834 15.2915V7.12484C2.4834 5.95817 2.9834 5.5415 4.15007 5.5415H4.9834C6.15006 5.5415 6.65007 5.95817 6.65007 7.12484V15.2915C6.65007 16.4582 6.15006 16.8748 4.9834 16.8748H4.15007C2.9834 16.8748 2.4834 16.4582 2.4834 15.2915Z"
+                        stroke="#282E38"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Yes</span>
+                  </p>
+                  <span class="block border"></span>
+                  <p class="inline-flex items-center gap-1">
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="20"
+                        height="20"
+                        transform="translate(0.5)"
+                        fill="white"
+                        fill-opacity="0.01"
+                      />
+                      <path
+                        d="M14.2668 4.7085L11.6834 2.7085C11.3501 2.37516 10.6001 2.2085 10.1001 2.2085H6.93344C5.93344 2.2085 4.8501 2.9585 4.6001 3.9585L2.6001 10.0418C2.18344 11.2085 2.93344 12.2085 4.18344 12.2085H7.51677C8.01677 12.2085 8.43344 12.6252 8.3501 13.2085L7.93344 15.8752C7.76677 16.6252 8.26677 17.4585 9.01677 17.7085C9.68344 17.9585 10.5168 17.6252 10.8501 17.1252L14.2668 12.0418"
+                        stroke="#282E38"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                      />
+                      <path
+                        d="M18.5168 4.70833V12.875C18.5168 14.0417 18.0168 14.4583 16.8501 14.4583H16.0168C14.8501 14.4583 14.3501 14.0417 14.3501 12.875V4.70833C14.3501 3.54167 14.8501 3.125 16.0168 3.125H16.8501C18.0168 3.125 18.5168 3.54167 18.5168 4.70833Z"
+                        stroke="#282E38"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>No</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--Related tags container-->
+            <div class="related_tags_container mt-10">
+              <h5
+                class="text-gray-800 font-roboto font-bold leading-5 text-sm mb-2"
+              >
+                Related Tags
+              </h5>
+              <div
+                class="tags text-gray-800 font-nexabold font-bold text-sm flex flex-wrap gap-2"
+              >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Betting</a
+                >
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1">NFL</a>
+                <a href="#" class="bg-slate-200 rounded-md px-3 py-1"
+                  >NFL Picks</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="w-1/4 hidden xl:block"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  </body>
+</html>
