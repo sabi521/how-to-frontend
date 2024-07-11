@@ -12,10 +12,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
-    />
   </head>
   <body>
     <header class="bg-blue-900 w-full h-16"></header>
@@ -108,10 +104,8 @@
                 />
               </svg>
 
-              <div class="terms_types">
+              <div class="terms_types dropdown-terms relative">
                 <button
-                  id="dropdownDefaultButton"
-                  data-dropdown-toggle="dropdown"
                   class="text-center inline-flex items-center font-roboto text-base leading-6 text-gray-800"
                   type="button"
                 >
@@ -132,13 +126,9 @@
 
                 <!-- Dropdown menu -->
                 <div
-                  id="dropdown"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                  class="z-10 dropdown-menu-terms absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                 >
-                  <ul
-                    class="py-2 text-sm text-neutral-800 font-roboto"
-                    aria-labelledby="dropdownDefaultButton"
-                  >
+                  <ul class="py-2 text-sm text-neutral-800 font-roboto">
                     <li>
                       <a href="#" class="block px-4 py-2 border-b"
                         >Sport Specific Guides</a
@@ -651,7 +641,6 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>

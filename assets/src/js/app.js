@@ -35,76 +35,78 @@ domReady(() => {
   });
 
   /**
-   * most_popular slider home page
+   * tabs for the home page
    */
-
-  var slider = tns({
-    container: ".most_popular-slider",
-    controlsText: [
-      '<img src="/assets/src/img/arrow-left.png" />',
-      '<img src="/assets/src/img/arrow-right.png" />',
-    ],
-    items: 3,
-    slideBy: "page",
-    fixedWidth: 272,
-    gutter: 24,
-    responsive: {
-      768: {
-        fixedWidth: 306,
-        gutter: 40,
-      },
-    },
+  let tabs = document.querySelectorAll(".tab");
+  let panels = document.querySelectorAll(".tab-panel");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      let tabTarget = tab.getAttribute("aria-controls");
+      panels.forEach((panel) => {
+        let panelId = panel.getAttribute("id");
+        if (tabTarget === panelId) {
+          panel.classList.remove("hidden");
+          panel.classList.add("block");
+        } else {
+          panel.classList.add("hidden");
+        }
+      });
+    });
   });
 
-  var slider = tns({
-    container: ".new_article-slider",
-    controlsText: [
-      '<img src="/assets/src/img/arrow-left.png" />',
-      '<img src="/assets/src/img/arrow-right.png" />',
-    ],
-    items: 3,
-    slideBy: "page",
-    fixedWidth: 272,
-    gutter: 24,
-    responsive: {
-      768: {
-        fixedWidth: 306,
-        gutter: 40,
-      },
-    },
-  });
+  /** Slider for The most popular section */
 
-  var slider = tns({
-    container: ".new_sportbook_slider",
-    controls: false,
-    items: 3,
-    slideBy: "page",
-    fixedWidth: 300,
-    gutter: 10,
-    responsive: {
-      768: {
-        fixedWidth: 326,
-      },
-    },
+  var splide1 = new Splide("#splide1", {
+    type: "loop", // slide loop fade
+    perPage: 4,
+    gap: 40,
+    fixedWidth: 306,
+    pagination: false,
+    arrows: false,
+    easing: "ease",
   });
+  splide1.mount();
 
-  /*  
-toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+  /** Slider for New Articles section */
+
+  var splide2 = new Splide("#splide2", {
+    type: "loop", // slide loop fade
+    perPage: 4,
+    gap: 40,
+    fixedWidth: 306,
+    pagination: false,
+    arrows: false,
+    easing: "ease",
+  });
+  splide2.mount();
+
+  var splide = new Splide("#splide3", {
+    type: "loop",
+    gap: 10,
+    fixedWidth: 326,
+    pagination: false,
+    arrows: false,
+    easing: "ease",
+  });
+  splide.mount();
+
+  // Function to handle slider navigation
+  function handleSliderNavigation(event, direction) {
+    var sliderId = event.currentTarget.getAttribute("data-slider-id");
+    var splide = sliderId === "splide1" ? splide1 : splide2;
+    splide.go(direction);
   }
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function (event) {
-    if (!event.target.matches(".dropbtn")) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
-        }
-      }
-    }
-  };
+  // Adding event listeners to the SVG buttons
+  document.querySelectorAll(".slider-prev-btn").forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      handleSliderNavigation(event, "-1");
+    });
+  });
+
+  document.querySelectorAll(".slider-next-btn").forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      handleSliderNavigation(event, "+1");
+    });
+  });
 });

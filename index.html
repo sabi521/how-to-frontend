@@ -8,13 +8,10 @@
 
     <!-- REQUIRED // Load js and css files -->
     <script type="module" src="/main.js"></script>
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
   </head>
   <body>
@@ -28,7 +25,7 @@
           >
             How to bet on sports
           </h1>
-          <form class="w-full mx-auto font-nexaregular mt-8 md:w-[710px]">
+          <form class="w-full mx-auto font-nexaregular mt-8 md:max-w-[710px]">
             <label
               for="default-search"
               class="mb-2 text-sm font-medium sr-only dark:text-white"
@@ -81,18 +78,17 @@
     <div class="sport_search_container">
       <div class="bg-blue-50 py-6">
         <div
-          class="sport_search max-w-[1288px] mx-auto grid grid-cols-2 gap-2.5 px-3 md:px-0 md:grid-cols-4"
-          id="sportsTab"
-          data-tabs-toggle="#sportsTabContent"
+          class="sport_search relative max-w-[1288px] mx-auto grid grid-cols-2 gap-2.5 px-3 xl:px-0 md:grid-cols-4"
           role="tablist"
+          aria-label="tabs"
         >
-          <a
-            class="block cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600 active"
-            id="sport1-tab"
-            data-tabs-target="#sport1"
+          <div
+            class="block tab cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600 active"
             role="tab"
-            aria-controls="sport1"
             aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            tabindex="0"
           >
             <img
               class="block mx-auto"
@@ -107,492 +103,86 @@
             <p class="text-slate-500 font-roboto text-xs md:text-sm">
               NFL, NBA, Baseball and more
             </p>
-          </a>
+          </div>
 
-          <div role="presentation">
-            <div
-              class="cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
-              id="sport2-tab"
-              data-tabs-target="#sport2"
-              role="tab"
-              aria-controls="sport2"
-              aria-selected="false"
+          <div
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            tabindex="-1"
+          >
+            <img
+              class="block mx-auto"
+              src="./assets/src/img/dice.png"
+              alt="game image"
+            />
+            <h3
+              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
             >
-              <img
-                class="block mx-auto"
-                src="./assets/src/img/dice.png"
-                alt="game image"
-              />
-              <h3
-                class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
-              >
-                bet Types & Odds
-              </h3>
-              <p class="text-slate-500 font-roboto text-xs md:text-sm">
-                Discover different bets and how odds work
-              </p>
-            </div>
+              bet Types & Odds
+            </h3>
+            <p class="text-slate-500 font-roboto text-xs md:text-sm">
+              Discover different bets and how odds work
+            </p>
           </div>
-          <div role="presentation">
-            <div
-              class="cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
-              id="sport3-tab"
-              data-tabs-target="#sport3"
-              type="button"
-              role="tab"
-              aria-controls="sport3"
-              aria-selected="false"
+
+          <div
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            tabindex="-1"
+          >
+            <img
+              class="block mx-auto"
+              src="./assets/src/img/bet-strategy.png"
+              alt="game image"
+            />
+            <h3
+              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
             >
-              <img
-                class="block mx-auto"
-                src="./assets/src/img/bet-strategy.png"
-                alt="game image"
-              />
-              <h3
-                class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
-              >
-                Betting Strategies
-              </h3>
-              <p class="text-slate-500 font-roboto text-xs md:text-sm">
-                Win big with expert betting tips!
-              </p>
-            </div>
+              Betting Strategies
+            </h3>
+            <p class="text-slate-500 font-roboto text-xs md:text-sm">
+              Win big with expert betting tips!
+            </p>
           </div>
-          <div role="presentation">
-            <div
-              class="cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
-              id="sport4-tab"
-              data-tabs-target="#sport4"
-              type="button"
-              role="tab"
-              aria-controls="sport4"
-              aria-selected="false"
+
+          <div
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-4"
+            id="tab-4"
+            tabindex="-1"
+          >
+            <img
+              class="block mx-auto"
+              src="./assets/src/img/terms.png"
+              alt="game image"
+            />
+            <h3
+              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
             >
-              <img
-                class="block mx-auto"
-                src="./assets/src/img/terms.png"
-                alt="game image"
-              />
-              <h3
-                class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
-              >
-                Terms
-              </h3>
-              <p class="text-slate-500 font-roboto text-xs md:text-sm">
-                Definitions of betting terminology
-              </p>
-            </div>
+              Terms
+            </h3>
+            <p class="text-slate-500 font-roboto text-xs md:text-sm">
+              Definitions of betting terminology
+            </p>
           </div>
         </div>
       </div>
-      <div id="sportsTabContent">
+      <!--Tabs content-->
+
+      <div class="mt-10 tab_content max-w-[996px] mx-auto">
         <!--Section 1: Sport-Specific Guides-->
         <section
-          class=""
-          id="sport1"
           role="tabpanel"
-          aria-labelledby="sport1-tab"
-        >
-          <div
-            class="single_section_container max-w-[996px] mx-auto mt-5 px-3 lg:px-0"
-          >
-            <div id="myTabContent">
-              <div
-                class="single_section_inner"
-                id="profile"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-              >
-                <header
-                  class="text-white bg-sky-900 rounded-xl px-8 py-6 flex justify-between items-start"
-                >
-                  <div class="">
-                    <h2 class="font-nexaheavy font-black text-lg md:text-2xl">
-                      Sport-Specific Guides
-                    </h2>
-                    <p class="font-roboto text-sm mt-2.5">
-                      NFL, NBA, Baseball and more
-                    </p>
-                  </div>
-                  <div
-                    class="w-24 text-center py-2 bg-white bg-opacity-10 text-white rounded-md"
-                  >
-                    <p class="font-nexabold font-bold text-sm">58 Articles</p>
-                  </div>
-                </header>
-
-                <!--Game blocks-->
-                <div class="game_blocks_container mt-5">
-                  <div
-                    class="single_block_container grid gap-2 grid-cols-1 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3"
-                  >
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/nfl.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          NFL
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>NFL Betting Basics</li>
-                        <li>Top NFL Betting Strategies</li>
-                        <li>Analyzing NFL Stats</li>
-                        <li>NFL Point Spreads and Moneylines</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +33 Articles More
-                      </p>
-                    </div>
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/football.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          College Football
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>College Football Betting 101</li>
-                        <li>NFL vs. College Football Betting</li>
-                        <li>Top College Football Betting Markets</li>
-                        <li>College Football Futures and Props</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +10 Articles More
-                      </p>
-                    </div>
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/nba.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          NBA
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>NBA Betting Guide</li>
-                        <li>Betting Strategies for NBA</li>
-                        <li>3 Easy SuperBowl Bets</li>
-                        <li>Analyzing NBA Stats</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +10 Articles More
-                      </p>
-                    </div>
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/basketball.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          College Basketball
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>Betting on College Basketball</li>
-                        <li>How to Bet on March Madness</li>
-                        <li>Key College Basketball Betting Factors</li>
-                        <li>College Basketball Moneyline</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +5 Articles More
-                      </p>
-                    </div>
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/baseball.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          Baseball
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>How to Bet on Baseball</li>
-                        <li>Top MLB Betting Strategies</li>
-                        <li>Baseball Betting Odds and Lines</li>
-                        <li>Analyzing MLB Stats</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +5 Articles More
-                      </p>
-                    </div>
-                    <div
-                      class="game_block border border-slate-200 rounded-2xl py-6"
-                    >
-                      <div class="px-6">
-                        <img
-                          class="block w-8 h-8"
-                          src="./assets/src/img/hockey.png"
-                          alt="icon"
-                        />
-                      </div>
-
-                      <div
-                        class="heading my-4 flex justify-between items-center px-6"
-                      >
-                        <h4
-                          class="text-gray-800 font-nexaheavy font-black text-lg"
-                        >
-                          Ice Hokey
-                        </h4>
-                        <svg
-                          class="right_icon"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.5 12H20.33"
-                            stroke="#282E38"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                      <ul
-                        class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
-                      >
-                        <li>NFL Betting Made Simple</li>
-                        <li>9 NFL Betting Strategies</li>
-                        <li>3 Easy SuperBowl Bets</li>
-                        <li>NFL Betting Made Simple</li>
-                      </ul>
-                      <p
-                        class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
-                      >
-                        +16 Articles More
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--Section 2: Bet types and odds-->
-        <section
-          class="hidden"
-          id="sport2"
-          role="tabpanel"
-          aria-labelledby="sport2-tab"
+          id="panel-1"
+          class="block tab-panel transition duration-300"
         >
           <div
             class="single_section_container max-w-[996px] mx-auto mt-5 px-3 lg:px-0"
@@ -603,6 +193,399 @@
               role="tabpanel"
               aria-labelledby="profile-tab"
             >
+              <header
+                class="text-white bg-sky-900 rounded-xl px-8 py-6 flex justify-between items-start"
+              >
+                <div class="">
+                  <h2 class="font-nexaheavy font-black text-lg md:text-2xl">
+                    Sport-Specific Guides
+                  </h2>
+                  <p class="font-roboto text-sm mt-2.5">
+                    NFL, NBA, Baseball and more
+                  </p>
+                </div>
+                <div
+                  class="w-24 text-center py-2 bg-white bg-opacity-10 text-white rounded-md"
+                >
+                  <p class="font-nexabold font-bold text-sm">58 Articles</p>
+                </div>
+              </header>
+
+              <!--Game blocks-->
+              <div class="game_blocks_container mt-5">
+                <div
+                  class="single_block_container grid gap-2 grid-cols-1 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3"
+                >
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/nfl.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        NFL
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>NFL Betting Basics</li>
+                      <li>Top NFL Betting Strategies</li>
+                      <li>Analyzing NFL Stats</li>
+                      <li>NFL Point Spreads and Moneylines</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +33 Articles More
+                    </p>
+                  </div>
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/football.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        College Football
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>College Football Betting 101</li>
+                      <li>NFL vs. College Football Betting</li>
+                      <li>Top College Football Betting Markets</li>
+                      <li>College Football Futures and Props</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +10 Articles More
+                    </p>
+                  </div>
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/nba.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        NBA
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>NBA Betting Guide</li>
+                      <li>Betting Strategies for NBA</li>
+                      <li>3 Easy SuperBowl Bets</li>
+                      <li>Analyzing NBA Stats</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +10 Articles More
+                    </p>
+                  </div>
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/basketball.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        College Basketball
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>Betting on College Basketball</li>
+                      <li>How to Bet on March Madness</li>
+                      <li>Key College Basketball Betting Factors</li>
+                      <li>College Basketball Moneyline</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +5 Articles More
+                    </p>
+                  </div>
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/baseball.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        Baseball
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>How to Bet on Baseball</li>
+                      <li>Top MLB Betting Strategies</li>
+                      <li>Baseball Betting Odds and Lines</li>
+                      <li>Analyzing MLB Stats</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +5 Articles More
+                    </p>
+                  </div>
+                  <div
+                    class="game_block border border-slate-200 rounded-2xl py-6"
+                  >
+                    <div class="px-6">
+                      <img
+                        class="block w-8 h-8"
+                        src="./assets/src/img/hockey.png"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <div
+                      class="heading my-4 flex justify-between items-center px-6"
+                    >
+                      <h4
+                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                      >
+                        Ice Hokey
+                      </h4>
+                      <svg
+                        class="right_icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.5 12H20.33"
+                          stroke="#282E38"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <ul
+                      class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
+                    >
+                      <li>NFL Betting Made Simple</li>
+                      <li>9 NFL Betting Strategies</li>
+                      <li>3 Easy SuperBowl Bets</li>
+                      <li>NFL Betting Made Simple</li>
+                    </ul>
+                    <p
+                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                    >
+                      +16 Articles More
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Section 2: Bet types and odds-->
+        <section
+          role="tabpanel"
+          id="panel-2"
+          class="hidden tab-panel transition duration-300"
+        >
+          <div
+            class="single_section_container max-w-[996px] mx-auto mt-5 px-3 lg:px-0"
+          >
+            <div class="single_section_inner">
               <header
                 class="text-white bg-emerald-900 rounded-xl px-8 py-6 flex justify-between items-start"
               >
@@ -811,24 +794,18 @@
 
         <!--Section 3: Betting Strategies-->
         <section
-          class="hidden"
-          id="sport3"
           role="tabpanel"
-          aria-labelledby="sport3-tab"
+          id="panel-3"
+          class="hidden tab-panel transition duration-300"
         >
           <div
             class="single_section_container max-w-[996px] mx-auto mt-5 px-3 lg:px-0"
           >
-            <div
-              class="single_section_inner"
-              id="profile"
-              role="tabpanel"
-              aria-labelledby="profile-tab"
-            >
+            <div class="single_section_inner">
               <header
                 class="text-white bg-red-900 rounded-xl px-8 py-6 flex justify-between items-start"
               >
-                <div class="">
+                <div>
                   <h2 class="font-nexaheavy font-black text-lg md:text-2xl">
                     Betting Strategies
                   </h2>
@@ -1033,20 +1010,14 @@
 
         <!--Section 4: Terms-->
         <section
-          class="hidden"
-          id="sport4"
           role="tabpanel"
-          aria-labelledby="sport4-tab"
+          id="panel-4"
+          class="hidden tab-panel transition duration-300"
         >
           <div
             class="single_section_container max-w-[996px] mx-auto mt-5 px-3 lg:px-0"
           >
-            <div
-              class="single_section_inner"
-              id="profile"
-              role="tabpanel"
-              aria-labelledby="profile-tab"
-            >
+            <div class="single_section_inner">
               <header
                 class="text-white bg-gray-700 rounded-xl px-8 py-6 flex justify-between items-start"
               >
@@ -1166,750 +1137,1000 @@
     </div>
 
     <!--The most popular section-->
-    <section
-      class="most_popular_section slider_section relative mt-16 max-w-[996px] mx-auto px-3 lg:px-0"
-    >
-      <div class="most_popular_container">
+    <div class="most_popular_container mt-10">
+      <div class="max-w-[996px] mx-auto flex justify-between px-3 lg:px-0">
         <h2 class="text-gray-800 font-nexaheavy font-black text-lg md:text-2xl">
           The Most Popular
         </h2>
-        <div class="most_popular-slider">
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              NFL
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
-              >
-                Analyzing NFL Stats
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              Baseball
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Top MLB Betting Strategies
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
+        <!--Arrows-->
+        <div class="flex gap-2">
+          <svg
+            class="slider-prev-btn cursor-pointer"
+            data-slider-id="splide1"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              fill="white"
+            />
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              stroke="#ADB5C2"
+            />
+            <path
+              d="M17.7501 21.0574C17.6392 21.0574 17.5284 21.0166 17.4409 20.9291L13.6376 17.1257C13.0192 16.5074 13.0192 15.4924 13.6376 14.8741L17.4409 11.0707C17.6101 10.9016 17.8901 10.9016 18.0592 11.0707C18.2284 11.2399 18.2284 11.5199 18.0592 11.6891L14.2559 15.4924C13.9759 15.7724 13.9759 16.2274 14.2559 16.5074L18.0592 20.3107C18.2284 20.4799 18.2284 20.7599 18.0592 20.9291C17.9717 21.0107 17.8609 21.0574 17.7501 21.0574Z"
+              fill="#ADB5C2"
+            />
+          </svg>
+          <svg
+            class="slider-next-btn cursor-pointer"
+            data-slider-id="splide1"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              stroke="#6F85AD"
+            />
+            <path
+              d="M14.1973 21.0574C14.0864 21.0574 13.9756 21.0166 13.8881 20.9291C13.7189 20.7599 13.7189 20.4799 13.8881 20.3107L17.6914 16.5074C17.9714 16.2274 17.9714 15.7724 17.6914 15.4924L13.8881 11.6891C13.7189 11.5199 13.7189 11.2399 13.8881 11.0707C14.0573 10.9016 14.3373 10.9016 14.5064 11.0707L18.3098 14.8741C18.6073 15.1716 18.7764 15.5741 18.7764 15.9999C18.7764 16.4257 18.6131 16.8282 18.3098 17.1257L14.5064 20.9291C14.4189 21.0107 14.3081 21.0574 14.1973 21.0574Z"
+              fill="#1D2129"
+            />
+          </svg>
         </div>
       </div>
-    </section>
+
+      <div
+        class="most_popular_slider splide mt-10 max-w-[1440px] pl-3 xl:px-0 xl:w-4/5 xl:ml-auto"
+        role="group"
+        id="splide1"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!--The new article section-->
-    <section
-      class="new_article_section slider_section relative mt-16 max-w-[996px] mx-auto px-3 lg:px-0"
-    >
-      <div class="new_article_container">
+    <div class="most_popular_container mt-10 pl:3 lg:px-0">
+      <div class="max-w-[996px] mx-auto flex justify-between px-3 lg:px-0">
         <h2 class="text-gray-800 font-nexaheavy font-black text-lg md:text-2xl">
           New Articles
         </h2>
-        <div class="new_article-slider">
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              NFL
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Analyzing NFL Stats
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              Baseball
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Top MLB Betting Strategies
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
-          <div class="single_slide space-y-3">
-            <p
-              class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
-            >
-              College Football
-            </p>
-            <header class="flex justify-between items-center gap-4">
-              <h4
-                class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
-              >
-                Key College Basketball Betting Factors
-              </h4>
-              <svg
-                class="right_icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.5 12H20.33"
-                  stroke="#282E38"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </header>
-            <p
-              class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
-            >
-              Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum eget.
-              Nunc neque arcu risus ipsum dolor sit amet consectetur
-            </p>
-          </div>
+        <!--Arrows-->
+        <div class="flex gap-2">
+          <svg
+            class="slider-prev-btn cursor-pointer"
+            data-slider-id="splide2"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              fill="white"
+            />
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              stroke="#ADB5C2"
+            />
+            <path
+              d="M17.7501 21.0574C17.6392 21.0574 17.5284 21.0166 17.4409 20.9291L13.6376 17.1257C13.0192 16.5074 13.0192 15.4924 13.6376 14.8741L17.4409 11.0707C17.6101 10.9016 17.8901 10.9016 18.0592 11.0707C18.2284 11.2399 18.2284 11.5199 18.0592 11.6891L14.2559 15.4924C13.9759 15.7724 13.9759 16.2274 14.2559 16.5074L18.0592 20.3107C18.2284 20.4799 18.2284 20.7599 18.0592 20.9291C17.9717 21.0107 17.8609 21.0574 17.7501 21.0574Z"
+              fill="#ADB5C2"
+            />
+          </svg>
+          <svg
+            class="slider-next-btn cursor-pointer"
+            data-slider-id="splide2"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="31"
+              height="31"
+              rx="15.5"
+              stroke="#6F85AD"
+            />
+            <path
+              d="M14.1973 21.0574C14.0864 21.0574 13.9756 21.0166 13.8881 20.9291C13.7189 20.7599 13.7189 20.4799 13.8881 20.3107L17.6914 16.5074C17.9714 16.2274 17.9714 15.7724 17.6914 15.4924L13.8881 11.6891C13.7189 11.5199 13.7189 11.2399 13.8881 11.0707C14.0573 10.9016 14.3373 10.9016 14.5064 11.0707L18.3098 14.8741C18.6073 15.1716 18.7764 15.5741 18.7764 15.9999C18.7764 16.4257 18.6131 16.8282 18.3098 17.1257L14.5064 20.9291C14.4189 21.0107 14.3081 21.0574 14.1973 21.0574Z"
+              fill="#1D2129"
+            />
+          </svg>
         </div>
       </div>
-    </section>
+
+      <div
+        class="new_article_slider splide mt-10 max-w-[1440px] pl-3 xl:px-0 xl:w-4/5 xl:ml-auto"
+        role="group"
+        id="splide2"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  College Football
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Key College Basketball Betting Factors
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  NFL
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
+                  >
+                    Analyzing NFL Stats
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="single_slide space-y-3">
+                <p
+                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                >
+                  Baseball
+                </p>
+                <header class="flex justify-between items-center gap-4">
+                  <h4
+                    class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
+                  >
+                    Top MLB Betting Strategies
+                  </h4>
+                  <svg
+                    class="right_icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.4302 5.93005L20.5002 12.0001L14.4302 18.0701"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.5 12H20.33"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </header>
+                <p
+                  class="content font-roboto text-slate-500 text-sm leading-5 line-clamp-2 lg:text-base lg:leading-6"
+                >
+                  Lorem ipsum dolor sit amet consectetur. Amet sit orci rutrum
+                  eget. Nunc neque arcu risus ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!--Reach out to Live agent section-->
     <section class="live_agent_section bg-blue-950 w-full py-10 mt-16">
@@ -1950,57 +2171,73 @@
           >
         </header>
 
-        <div class="new_sportbook_slider">
-          <div class="single_block relative">
-            <div class="image">
-              <img src="./assets/src/img/game_img.png" alt="game image" />
-            </div>
-            <img
-              class="icon absolute top-2 left-2"
-              src="./assets/src/img/sports_football.png"
-              alt="football icon"
-            />
-            <p class="date font-roboto text-sm text-slate-500 py-2">
-              Dec 8, 2022 • 13 min read
-            </p>
-            <h4 class="font-nexabold font-bold text-base text-neutral-800">
-              Butler vs Providence Prediction, Game Preview, Live Stream, Odds
-              and Picks
-            </h4>
-          </div>
-          <div class="single_block relative">
-            <div class="image">
-              <img src="./assets/src/img/game_img.png" alt="game image" />
-            </div>
-            <img
-              class="icon absolute top-2 left-2"
-              src="./assets/src/img/sports_football.png"
-              alt="football icon"
-            />
-            <p class="date py-2 font-roboto text-sm text-slate-500">
-              Dec 8, 2022 • 13 min read
-            </p>
-            <h4 class="font-nexabold font-bold text-base text-neutral-800">
-              Butler vs Providence Prediction, Game Preview, Live Stream, Odds
-              and Picks
-            </h4>
-          </div>
-          <div class="single_block relative">
-            <div class="image">
-              <img src="./assets/src/img/game_img.png" alt="game image" />
-            </div>
-            <img
-              class="icon absolute top-2 left-2"
-              src="./assets/src/img/sports_football.png"
-              alt="football icon"
-            />
-            <p class="date py-2 font-roboto text-sm text-slate-500">
-              Dec 8, 2022 • 13 min read
-            </p>
-            <h4 class="font-nexabold font-bold text-base text-neutral-800">
-              Butler vs Providence Prediction, Game Preview, Live Stream, Odds
-              and Picks
-            </h4>
+        <div class="splide mt-10 max-w-[996px]" role="group" id="splide3">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="single_block relative">
+                  <div class="image">
+                    <img src="./assets/src/img/game_img.png" alt="game image" />
+                  </div>
+                  <img
+                    class="icon absolute top-2 left-2"
+                    src="./assets/src/img/sports_football.png"
+                    alt="football icon"
+                  />
+                  <p class="date font-roboto text-sm text-slate-500 py-2">
+                    Dec 8, 2022 • 13 min read
+                  </p>
+                  <h4
+                    class="font-nexabold font-bold text-base text-neutral-800"
+                  >
+                    Butler vs Providence Prediction, Game Preview, Live Stream,
+                    Odds and Picks
+                  </h4>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="single_block relative">
+                  <div class="image">
+                    <img src="./assets/src/img/game_img.png" alt="game image" />
+                  </div>
+                  <img
+                    class="icon absolute top-2 left-2"
+                    src="./assets/src/img/sports_football.png"
+                    alt="football icon"
+                  />
+                  <p class="date font-roboto text-sm text-slate-500 py-2">
+                    Dec 8, 2022 • 13 min read
+                  </p>
+                  <h4
+                    class="font-nexabold font-bold text-base text-neutral-800"
+                  >
+                    Butler vs Providence Prediction, Game Preview, Live Stream,
+                    Odds and Picks
+                  </h4>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="single_block relative">
+                  <div class="image">
+                    <img src="./assets/src/img/game_img.png" alt="game image" />
+                  </div>
+                  <img
+                    class="icon absolute top-2 left-2"
+                    src="./assets/src/img/sports_football.png"
+                    alt="football icon"
+                  />
+                  <p class="date font-roboto text-sm text-slate-500 py-2">
+                    Dec 8, 2022 • 13 min read
+                  </p>
+                  <h4
+                    class="font-nexabold font-bold text-base text-neutral-800"
+                  >
+                    Butler vs Providence Prediction, Game Preview, Live Stream,
+                    Odds and Picks
+                  </h4>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -2083,7 +2320,7 @@
         </div>
       </div>
     </section>
-    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
 </html>
