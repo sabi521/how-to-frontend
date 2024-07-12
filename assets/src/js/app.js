@@ -39,15 +39,34 @@ domReady(() => {
    */
   let tabs = document.querySelectorAll(".tab");
   let panels = document.querySelectorAll(".tab-panel");
+
+  // Set the first tab and panel as selected by default
+  tabs[0].querySelector("h3").classList.add("selected-heading");
+  tabs[0].classList.add("selected-tab");
+  panels[0].classList.add("block");
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       let tabTarget = tab.getAttribute("aria-controls");
+
+      // Change the selected tab heading color and border
+      tabs.forEach((t) => {
+        t.querySelector("h3").classList.remove("selected-heading");
+        t.classList.remove("selected-tab");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.querySelector("h3").classList.add("selected-heading");
+      tab.classList.add("selected-tab");
+      tab.setAttribute("aria-selected", "true");
+
+      // Show/Hide the content panels
       panels.forEach((panel) => {
         let panelId = panel.getAttribute("id");
         if (tabTarget === panelId) {
           panel.classList.remove("hidden");
           panel.classList.add("block");
         } else {
+          panel.classList.remove("block");
           panel.classList.add("hidden");
         }
       });
@@ -79,6 +98,8 @@ domReady(() => {
     easing: "ease",
   });
   splide2.mount();
+
+  /** Slider for whats new on sportsbook section */
 
   var splide = new Splide("#splide3", {
     type: "loop",

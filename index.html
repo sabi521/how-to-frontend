@@ -68,7 +68,12 @@
             class="search_examples font-nexaregular text-base text-left pt-2"
           >
             <span class="text-slate-300">For example: </span>
-            <span class="text-white">Betting strategies, Super Bowl</span>
+            <span class="text-white mr-2 border-b border-white border-dashed"
+              >Betting strategies</span
+            >
+            <span class="text-white mr-2 border-b border-white border-dashed"
+              >Super Bowl</span
+            >
           </div>
         </div>
       </div>
@@ -83,7 +88,7 @@
           aria-label="tabs"
         >
           <div
-            class="block tab cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600 active"
+            class="block tab cursor-pointer box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 shadow-3xl hover:border-2 hover:border-blue-600"
             role="tab"
             aria-selected="true"
             aria-controls="panel-1"
@@ -96,7 +101,7 @@
               alt="game image"
             />
             <h3
-              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
+              class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg selected-heading"
             >
               Sport-Specific Guides
             </h3>
@@ -106,7 +111,7 @@
           </div>
 
           <div
-            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl hover:border-2 hover:border-blue-600"
             role="tab"
             aria-selected="false"
             aria-controls="panel-2"
@@ -121,7 +126,7 @@
             <h3
               class="font-nexaheavy font-black text-black capitalize text-sm py-4 md:text-lg"
             >
-              bet Types & Odds
+              Bet Types & Odds
             </h3>
             <p class="text-slate-500 font-roboto text-xs md:text-sm">
               Discover different bets and how odds work
@@ -129,7 +134,7 @@
           </div>
 
           <div
-            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl hover:border-2 hover:border-blue-600"
             role="tab"
             aria-selected="false"
             aria-controls="panel-3"
@@ -152,7 +157,7 @@
           </div>
 
           <div
-            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl focus:shadow-4xl hover:border-2 hover:border-blue-600"
+            class="cursor-pointer tab box-border px-4 bg-slate-50 text-center pt-4 pb-5 rounded-xl border-2 border-slate-200 shadow-3xl hover:border-2 hover:border-blue-600"
             role="tab"
             aria-selected="false"
             aria-controls="panel-4"
@@ -267,7 +272,7 @@
                       <li>NFL Betting Basics</li>
                       <li>Top NFL Betting Strategies</li>
                       <li>Analyzing NFL Stats</li>
-                      <li>NFL Point Spreads and Moneylines</li>
+                      <li class="play_btn">NFL Point Spreads and Moneylines</li>
                     </ul>
                     <p
                       class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
@@ -323,7 +328,7 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>College Football Betting 101</li>
+                      <li class="play_btn">College Football Betting 101</li>
                       <li>NFL vs. College Football Betting</li>
                       <li>Top College Football Betting Markets</li>
                       <li>College Football Futures and Props</li>
@@ -385,7 +390,7 @@
                       <li>NBA Betting Guide</li>
                       <li>Betting Strategies for NBA</li>
                       <li>3 Easy SuperBowl Bets</li>
-                      <li>Analyzing NBA Stats</li>
+                      <li class="play_btn">Analyzing NBA Stats</li>
                     </ul>
                     <p
                       class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
@@ -562,7 +567,7 @@
                       <li>NFL Betting Made Simple</li>
                       <li>9 NFL Betting Strategies</li>
                       <li>3 Easy SuperBowl Bets</li>
-                      <li>NFL Betting Made Simple</li>
+                      <li class="play_btn">NFL Betting Made Simple</li>
                     </ul>
                     <p
                       class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
@@ -1635,7 +1640,7 @@
     </div>
 
     <!--The new article section-->
-    <div class="most_popular_container mt-10 pl:3 lg:px-0">
+    <div class="most_popular_container mt-10 pl-3 lg:px-0">
       <div class="max-w-[996px] mx-auto flex justify-between px-3 lg:px-0">
         <h2 class="text-gray-800 font-nexaheavy font-black text-lg md:text-2xl">
           New Articles
@@ -2133,12 +2138,18 @@
     </div>
 
     <!--Reach out to Live agent section-->
-    <section class="live_agent_section bg-blue-950 w-full py-10 mt-16">
+    <section
+      class="live_agent_section bg-blue-950 w-full py-10 mt-16 px-3 lg:px-0"
+    >
       <div
-        class="live_agent_container bg-white rounded-2xl border-slate-200 max-w-[728px] mx-auto flex flex-col items-center gap-10 md:flex-row"
+        class="live_agent_container bg-white rounded-2xl border-slate-200 max-w-[728px] mx-auto flex flex-col items-center gap-10 pt-1 pb-8 sm:p-0 sm:flex-row"
       >
-        <div class="image max-w-[234px]">
-          <img class="w-full" src="./assets/src/img/video.png" alt="" />
+        <div class="image w-full sm:max-w-[234px]">
+          <img
+            class="w-full object-cover"
+            src="./assets/src/img/video.png"
+            alt=""
+          />
         </div>
         <div class="content">
           <p class="font-nexaregular text-slate-500">Instatnt Assistance:</p>
@@ -2256,7 +2267,11 @@
         <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
           <div class="single_block border border-slate-200 rounded-xl pb-6">
             <div class="image mb-3">
-              <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              <img
+                class="w-full rounded-t-xl"
+                src="./assets/src/img/lr.png"
+                alt="image"
+              />
             </div>
             <div class="content px-6 space-y-3">
               <h5 class="font-nexaheavy font-black text-lg text-gray-800">
@@ -2277,11 +2292,15 @@
           </div>
           <div class="single_block border border-slate-200 rounded-xl pb-6">
             <div class="image mb-3">
-              <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              <img
+                class="w-full rounded-t-xl"
+                src="./assets/src/img/wg.png"
+                alt="image"
+              />
             </div>
             <div class="content px-6 space-y-3">
               <h5 class="font-nexaheavy font-black text-lg text-gray-800">
-                The Locker Room
+                The Wise Guy
               </h5>
               <p
                 class="font-roboto font-normal text-gray-800 text-sm leading-5"
@@ -2292,17 +2311,21 @@
               <a
                 class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
                 href="#"
-                >Go to Locker Room</a
+                >Go to The Wise Guy</a
               >
             </div>
           </div>
           <div class="single_block border border-slate-200 rounded-xl pb-6">
             <div class="image mb-3">
-              <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+              <img
+                class="w-full rounded-t-xl"
+                src="./assets/src/img/btv.png"
+                alt="image"
+              />
             </div>
             <div class="content px-6 space-y-3">
               <h5 class="font-nexaheavy font-black text-lg text-gray-800">
-                The Locker Room
+                BetUS TV
               </h5>
               <p
                 class="font-roboto font-normal text-gray-800 text-sm leading-5"
@@ -2313,7 +2336,7 @@
               <a
                 class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
                 href="#"
-                >Go to Locker Room</a
+                >Go to BetUS TV</a
               >
             </div>
           </div>
