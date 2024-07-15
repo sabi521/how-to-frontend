@@ -20,19 +20,73 @@ function domReady(fn) {
  */
 domReady(() => {
   console.log("The Dom is ready! 🚀");
+  /** Search functionality show and hide 404 page */
+
+  const customSearchInput = document.getElementById("custom-search-input");
+  const customSearchIcon = document.getElementById("custom-search-icon");
+  const customCloseIcon = document.getElementById("custom-close-icon");
+
+  if (customSearchInput && customSearchIcon && customCloseIcon) {
+    const placeholderText = customSearchInput.getAttribute("placeholder");
+
+    customSearchInput.addEventListener("focus", function () {
+      customSearchIcon.classList.add("hidden");
+      customCloseIcon.classList.remove("hidden");
+      customSearchInput.setAttribute("placeholder", "");
+    });
+
+    customSearchInput.addEventListener("blur", function () {
+      if (customSearchInput.value.length === 0) {
+        customSearchIcon.classList.remove("hidden");
+        customCloseIcon.classList.add("hidden");
+      }
+      customSearchInput.setAttribute("placeholder", placeholderText);
+    });
+
+    customCloseIcon.addEventListener("click", function () {
+      customSearchInput.value = "";
+      customSearchIcon.classList.remove("hidden");
+      customCloseIcon.classList.add("hidden");
+      customSearchInput.setAttribute("placeholder", placeholderText);
+      customSearchInput.focus();
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        event.target !== customSearchInput &&
+        event.target !== customCloseIcon
+      ) {
+        if (customSearchInput.value.length === 0) {
+          customSearchIcon.classList.remove("hidden");
+          customCloseIcon.classList.add("hidden");
+          customSearchInput.setAttribute("placeholder", placeholderText);
+        }
+      }
+    });
+  }
+
+  const dropdownBtn = document.querySelector(".agent_dropdown_btn");
+  const dropdownMenu = document.getElementById("agentDropdown");
+
+  dropdownBtn.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("hidden");
+  });
 
   /**
    * search bar in the banner
    */
   const searchInput = document.getElementById("default-search");
   const searchButton = document.getElementById("search-icon");
-  searchInput.addEventListener("input", function () {
-    if (searchInput.value.length > 0) {
-      searchButton.classList.add("hidden");
-    } else {
-      searchButton.classList.remove("hidden");
-    }
-  });
+
+  if (searchInput && searchButton) {
+    searchInput.addEventListener("input", function () {
+      if (searchInput.value.length > 0) {
+        searchButton.classList.add("hidden");
+      } else {
+        searchButton.classList.remove("hidden");
+      }
+    });
+  }
 
   /**
    * tabs for the home page
@@ -42,6 +96,7 @@ domReady(() => {
 
   // Set the first tab and panel as selected by default
   tabs[0].querySelector("h3").classList.add("selected-heading");
+  tabs[0].querySelector("p").classList.add("selected-paragraph");
   tabs[0].classList.add("selected-tab");
   panels[0].classList.add("block");
 
@@ -52,10 +107,12 @@ domReady(() => {
       // Change the selected tab heading color and border
       tabs.forEach((t) => {
         t.querySelector("h3").classList.remove("selected-heading");
+        t.querySelector("p").classList.remove("selected-paragraph");
         t.classList.remove("selected-tab");
         t.setAttribute("aria-selected", "false");
       });
       tab.querySelector("h3").classList.add("selected-heading");
+      tab.querySelector("p").classList.add("selected-paragraph");
       tab.classList.add("selected-tab");
       tab.setAttribute("aria-selected", "true");
 

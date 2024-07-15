@@ -17,8 +17,10 @@
   <body>
     <header class="bg-blue-900 w-full h-16"></header>
     <!--  Search banner-->
-    <div class="header_banner bg-black">
-      <div class="max-w-[724px] mx-auto py-14">
+    <div
+      class="header_banner bg-[url('/assets/src/img/hero_mobile.png')] bg-cover pt-12 pb-16 sm:pt-[88px] sm:pb-[104px] sm:bg-[url('/assets/src/img/hero_desktop.png')]"
+    >
+      <div class="max-w-[724px] mx-auto">
         <div class="px-3 text-center text-white md:px-12">
           <h1
             class="text-2xl leading-8 font-nexaheavy font-black md:leading-[48px] md:text-3xl"
@@ -35,7 +37,7 @@
               <input
                 type="search"
                 id="default-search"
-                class="block bg-slate-50 w-full text-sm p-4 ps-4 text-slate-400 border border-slate-50 outline-none rounded-full"
+                class="block bg-slate-50 w-full text-sm pl-6 py-4 ps-4 text-slate-400 border border-slate-50 outline-none rounded-full"
                 placeholder="Search for something"
                 required
               />
@@ -43,7 +45,7 @@
               <button
                 type="submit"
                 id="search-icon"
-                class="absolute right-0 top-1.5 py-2 px-2 sm:px-4 border-l"
+                class="absolute right-0 top-1.5 py-2 px-2 border-l sm:pr-6 sm:pl-4"
               >
                 <svg
                   width="24"
@@ -182,7 +184,7 @@
       </div>
       <!--Tabs content-->
 
-      <div class="mt-10 tab_content max-w-[996px] mx-auto">
+      <div class="tab_content max-w-[996px] mx-auto">
         <!--Section 1: Sport-Specific Guides-->
         <section
           role="tabpanel"
@@ -199,7 +201,7 @@
               aria-labelledby="profile-tab"
             >
               <header
-                class="text-white bg-sky-900 rounded-xl px-8 py-6 flex justify-between items-start"
+                class="text-white bg-[#00346B] rounded-xl px-8 py-6 flex justify-between items-start"
               >
                 <div class="">
                   <h2 class="font-nexaheavy font-black text-lg md:text-2xl">
@@ -222,7 +224,7 @@
                   class="single_block_container grid gap-2 grid-cols-1 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3"
                 >
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -236,12 +238,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         NFL
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -269,19 +271,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NFL Betting Basics</li>
-                      <li>Top NFL Betting Strategies</li>
-                      <li>Analyzing NFL Stats</li>
-                      <li class="play_btn">NFL Point Spreads and Moneylines</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Betting Basics</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top NFL Betting Strategies</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing NFL Stats</a
+                        >
+                      </li>
+                      <li class="play_btn">
+                        <a href="#" class="hover:underline"
+                          >NFL Point Spreads and Moneylines</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +33 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -295,12 +313,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         College Football
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -328,19 +346,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li class="play_btn">College Football Betting 101</li>
-                      <li>NFL vs. College Football Betting</li>
-                      <li>Top College Football Betting Markets</li>
-                      <li>College Football Futures and Props</li>
+                      <li class="play_btn">
+                        <a href="#" class="hover:underline"
+                          >College Football Betting 101</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL vs. College Football Betting</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top College Football Betting Markets</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Football Futures and Props</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -354,12 +388,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         NBA
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -387,19 +421,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NBA Betting Guide</li>
-                      <li>Betting Strategies for NBA</li>
-                      <li>3 Easy SuperBowl Bets</li>
-                      <li class="play_btn">Analyzing NBA Stats</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NBA Betting Guide</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Betting Strategies for NBA</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >3 Easy SuperBowl Bets</a
+                        >
+                      </li>
+                      <li class="play_btn">
+                        <a href="#" class="hover:underline"
+                          >Analyzing NBA Stats</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -413,12 +463,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         College Basketball
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -446,19 +496,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>Betting on College Basketball</li>
-                      <li>How to Bet on March Madness</li>
-                      <li>Key College Basketball Betting Factors</li>
-                      <li>College Basketball Moneyline</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Betting on College Basketball</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >How to Bet on March Madness</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Key College Basketball Betting Factors</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Basketball Moneyline</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +5 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -472,12 +538,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Baseball
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -505,19 +571,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>How to Bet on Baseball</li>
-                      <li>Top MLB Betting Strategies</li>
-                      <li>Baseball Betting Odds and Lines</li>
-                      <li>Analyzing MLB Stats</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >How to Bet on Baseball</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top MLB Betting Strategies</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Baseball Betting Odds and Lines</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing MLB Stats</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +5 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -531,12 +613,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Ice Hokey
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -564,13 +646,29 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NFL Betting Made Simple</li>
-                      <li>9 NFL Betting Strategies</li>
-                      <li>3 Easy SuperBowl Bets</li>
-                      <li class="play_btn">NFL Betting Made Simple</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Betting Made Simple</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >9 NFL Betting Strategies</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >3 Easy SuperBowl Bets</a
+                        >
+                      </li>
+                      <li class="play_btn">
+                        <a href="#" class="hover:underline"
+                          >NFL Betting Made Simple</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +16 Articles More
                     </p>
@@ -615,7 +713,7 @@
                   class="single_block_container grid gap-2 grid-cols-1 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3"
                 >
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -629,12 +727,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Basic Bet Types
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -662,19 +760,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NFL Betting Basics</li>
-                      <li>Top NFL Betting Strategies</li>
-                      <li>Analyzing NFL Stats</li>
-                      <li>NFL Point Spreads and Moneylines</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Betting Basics</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top NFL Betting Strategies</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing NFL Stats</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Point Spreads and Moneylines</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +33 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -688,12 +802,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Advanced Bet Types
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -721,19 +835,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>College Football Betting 101</li>
-                      <li>NFL vs. College Football Betting</li>
-                      <li>Top College Football Betting Markets</li>
-                      <li>College Football Futures and Props</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Football Betting 101</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL vs. College Football Betting</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top College Football Betting Markets</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Football Futures and Props</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -747,12 +877,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Betting Odds & Tools
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -780,13 +910,29 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NBA Betting Guide</li>
-                      <li>Betting Strategies for NBA</li>
-                      <li>3 Easy SuperBowl Bets</li>
-                      <li>Analyzing NBA Stats</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NBA Betting Guide</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Betting Strategies for NBA</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >3 Easy SuperBowl Bets</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing NBA Stats</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
@@ -831,7 +977,7 @@
                   class="single_block_container grid gap-2 grid-cols-1 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3"
                 >
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -845,12 +991,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         General Strategies
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -878,19 +1024,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NFL Betting Basics</li>
-                      <li>Top NFL Betting Strategies</li>
-                      <li>Analyzing NFL Stats</li>
-                      <li>NFL Point Spreads and Moneylines</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Betting Basics</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top NFL Betting Strategies</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing NFL Stats</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL Point Spreads and Moneylines</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +33 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -904,12 +1066,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Analyzing Data and Statistics
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -937,19 +1099,35 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>College Football Betting 101</li>
-                      <li>NFL vs. College Football Betting</li>
-                      <li>Top College Football Betting Markets</li>
-                      <li>College Football Futures and Props</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Football Betting 101</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NFL vs. College Football Betting</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Top College Football Betting Markets</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >College Football Futures and Props</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
                   </div>
                   <div
-                    class="game_block border border-slate-200 rounded-2xl py-6"
+                    class="game_block border border-slate-200 hover:border-blue-600 rounded-2xl py-6"
                   >
                     <div class="px-6">
                       <img
@@ -963,12 +1141,12 @@
                       class="heading my-4 flex justify-between items-center px-6"
                     >
                       <h4
-                        class="text-gray-800 font-nexaheavy font-black text-lg"
+                        class="text-gray-800 font-nexaheavy font-black text-lg w-4/5"
                       >
                         Research Resources
                       </h4>
                       <svg
-                        class="right_icon"
+                        class="right_icon w-1/5"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -996,13 +1174,29 @@
                     <ul
                       class="list_container font-roboto text-base leading-6 text-blue-600 my-4 flex flex-col gap-3 px-6"
                     >
-                      <li>NBA Betting Guide</li>
-                      <li>Betting Strategies for NBA</li>
-                      <li>3 Easy SuperBowl Bets</li>
-                      <li>Analyzing NBA Stats</li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >NBA Betting Guide</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Betting Strategies for NBA</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >3 Easy SuperBowl Bets</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="hover:underline"
+                          >Analyzing NBA Stats</a
+                        >
+                      </li>
                     </ul>
                     <p
-                      class="more_articles font-roboto font-bold uppercase text-slate-500 px-6"
+                      class="more_articles text-sm font-roboto font-bold uppercase text-slate-500 px-6"
                     >
                       +10 Articles More
                     </p>
@@ -1053,10 +1247,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="block">
@@ -1068,10 +1276,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="block">
@@ -1083,10 +1305,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="block">
@@ -1098,10 +1334,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="block">
@@ -1113,10 +1363,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
                 <div class="block">
@@ -1128,10 +1392,24 @@
                   <ul
                     class="list_container font-roboto text-base leading-6 text-blue-600 my-4 space-y-3"
                   >
-                    <li>NFL Betting Basics</li>
-                    <li>Top NFL Betting Strategies</li>
-                    <li>Analyzing NFL Stats</li>
-                    <li>NFL Point Spreads and Moneylines</li>
+                    <li>
+                      <a href="#" class="hover:underline">NFL Betting Basics</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Top NFL Betting Strategies</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >Analyzing NFL Stats</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline"
+                        >NFL Point Spreads and Moneylines</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -1142,7 +1420,7 @@
     </div>
 
     <!--The most popular section-->
-    <div class="most_popular_container mt-10">
+    <div class="most_popular_container mt-16">
       <div class="max-w-[996px] mx-auto flex justify-between px-3 lg:px-0">
         <h2 class="text-gray-800 font-nexaheavy font-black text-lg md:text-2xl">
           The Most Popular
@@ -1205,19 +1483,20 @@
       </div>
 
       <div
-        class="most_popular_slider splide mt-10 max-w-[1440px] pl-3 xl:px-0 xl:w-4/5 xl:ml-auto"
+        class="most_popular_slider splide mt-5 w-full pl-3"
         role="group"
         id="splide1"
       >
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1258,13 +1537,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -1305,13 +1585,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1352,13 +1633,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1399,13 +1681,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -1446,13 +1729,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1493,13 +1777,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1540,13 +1825,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -1587,13 +1873,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1640,7 +1927,7 @@
     </div>
 
     <!--The new article section-->
-    <div class="most_popular_container mt-10 pl-3 lg:px-0">
+    <div class="most_popular_container mt-16 pl-3 lg:px-0">
       <div class="max-w-[996px] mx-auto flex justify-between px-3 lg:px-0">
         <h2 class="text-gray-800 font-nexaheavy font-black text-lg md:text-2xl">
           New Articles
@@ -1703,19 +1990,20 @@
       </div>
 
       <div
-        class="new_article_slider splide mt-10 max-w-[1440px] pl-3 xl:px-0 xl:w-4/5 xl:ml-auto"
+        class="new_article_slider splide mt-5 w-full pl-3"
         role="group"
         id="splide2"
       >
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1756,13 +2044,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -1803,13 +2092,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1850,13 +2140,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1897,13 +2188,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -1944,13 +2236,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -1991,13 +2284,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   College Football
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -2038,13 +2332,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   NFL
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 md:text-lg"
@@ -2085,13 +2380,14 @@
                 </p>
               </div>
             </li>
-            <li class="splide__slide">
+            <li class="splide__slide cursor-pointer">
               <div class="single_slide space-y-3">
-                <p
-                  class="game_tag bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold p-3 max-w-[118px] text-center"
+                <a
+                  href="#"
+                  class="game_tag inline-block bg-slate-200 rounded-md text-gray-800 text-xs font-nexabold font-bold px-3 py-1 text-center"
                 >
                   Baseball
-                </p>
+                </a>
                 <header class="flex justify-between items-center gap-4">
                   <h4
                     class="max-w-[263px] text-gray-800 font-nexaheavy font-black text-base leading-5 lg:text-lg"
@@ -2142,9 +2438,9 @@
       class="live_agent_section bg-blue-950 w-full py-10 mt-16 px-3 lg:px-0"
     >
       <div
-        class="live_agent_container bg-white rounded-2xl border-slate-200 max-w-[728px] mx-auto flex flex-col items-center gap-10 pt-1 pb-8 sm:p-0 sm:flex-row"
+        class="live_agent_container relative bg-white rounded-2xl border-slate-200 max-w-[728px] mx-auto flex flex-col items-center gap-10 pt-1 pb-8 sm:p-0 sm:flex-row"
       >
-        <div class="image w-full sm:max-w-[234px]">
+        <div class="agent_image w-full sm:max-w-[234px]">
           <img
             class="w-full object-cover"
             src="./assets/src/img/video.png"
@@ -2156,12 +2452,120 @@
           <p class="font-nexaheavy font-black text-xl leading-6 md:text-2xl">
             Reach Out to Our Live Agent
           </p>
-          <a
-            href="#"
-            class="mt-6 font-nexaheavy font-black text-white text-base rounded-full bg-blue-600 flex items-center justify-center gap-2 py-2 w-[200px]"
-            ><span>Contact the Agent</span>
-            <img class="w-4 h-4" src="./assets/src/img/down-arrow.png" alt=""
-          /></a>
+          <div class="mt-6 relative">
+            <div
+              class="agent_dropdown_btn cursor-pointer font-nexaheavy font-black text-base rounded-full bg-blue-600 flex items-center justify-center gap-2 py-2 w-[200px]"
+            >
+              <span class="text-white">Contact the Agent</span>
+              <img
+                class="w-4 h-4"
+                src="./assets/src/img/down-arrow.png"
+                alt=""
+              />
+            </div>
+
+            <ul
+              id="agentDropdown"
+              class="hidden mt-2 ml-2 absolute agent_dropdown z-10 min-w-[180px] overflow-auto rounded-xl border border-slate-200 bg-white font-roboto shadow-5xl font-normal text-gray-800 focus:outline-none"
+            >
+              <li class="block w-full cursor-pointer pt-[9px] py-2 border-b">
+                <span class="px-2 inline-flex items-center gap-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.08268 15.8334H6.66602C3.33268 15.8334 1.66602 15.0001 1.66602 10.8334V6.66675C1.66602 3.33341 3.33268 1.66675 6.66602 1.66675H13.3327C16.666 1.66675 18.3327 3.33341 18.3327 6.66675V10.8334C18.3327 14.1667 16.666 15.8334 13.3327 15.8334H12.916C12.6577 15.8334 12.4077 15.9584 12.2493 16.1667L10.9993 17.8334C10.4493 18.5667 9.54935 18.5667 8.99935 17.8334L7.74935 16.1667C7.61602 15.9834 7.30768 15.8334 7.08268 15.8334Z"
+                      stroke="#252A32"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.3301 9.16667H13.3375"
+                      stroke="#252A32"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M9.99607 9.16667H10.0036"
+                      stroke="#252A32"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.66209 9.16667H6.66957"
+                      stroke="#252A32"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                  >Contact via Chat</span
+                >
+              </li>
+              <li class="block w-full cursor-pointer pt-[9px] pb-2 border-b">
+                <span class="px-2 inline-flex items-center gap-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.91912 3.54768C7.66602 2.91492 7.05317 2.5 6.37166 2.5H4.07895C3.20692 2.5 2.5 3.20695 2.5 4.07898C2.5 11.4912 8.50898 17.5 15.9212 17.5C16.7933 17.5 17.5 16.7931 17.5 15.9211L17.4999 13.6284C17.4999 12.9468 17.0849 12.3341 16.4522 12.0809L14.2559 11.2024C13.6876 10.975 13.0404 11.0775 12.5702 11.4694L12.0026 11.9423C11.3404 12.4941 10.3666 12.45 9.75712 11.8405L8.15947 10.2429C7.54994 9.63339 7.50602 8.65961 8.05786 7.9974L8.53068 7.42998C8.92258 6.95969 9.02502 6.31244 8.79766 5.74405L7.91912 3.54768Z"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                  >Contact via Call</span
+                >
+              </li>
+              <li class="block w-full cursor-pointer pt-[9px] pb-2">
+                <span class="px-2 inline-flex items-center gap-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.166 17.0834H5.83268C3.33268 17.0834 1.66602 15.8334 1.66602 12.9167V7.08341C1.66602 4.16675 3.33268 2.91675 5.83268 2.91675H14.166C16.666 2.91675 18.3327 4.16675 18.3327 7.08341V12.9167C18.3327 15.8334 16.666 17.0834 14.166 17.0834Z"
+                      stroke="#252A32"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14.1673 7.5L11.559 9.58333C10.7006 10.2667 9.29231 10.2667 8.43398 9.58333L5.83398 7.5"
+                      stroke="#252A32"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                  >Contact via Email</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="overlay_agent bg-neutral-800 px-6 py-2 border border-slate-500 rounded-b-[20px] rounded-tr-[20px] sm:rounded-t-[20px] sm:rounded-br-[20px] sm:rounded-bl-none"
+        >
+          <p class="font-nexaregular text-slate-400 text-sm">Support Agent</p>
+          <p class="font-nexaregular text-white text-base sm:text-lg">
+            Do you need any help?
+          </p>
         </div>
       </div>
     </section>
@@ -2169,7 +2573,7 @@
     <!--Whats new on sportbook section-->
     <section class="new_on_sportsbook mt-16 max-w-[996px] mx-auto px-3 lg:px-0">
       <div class="new_sportbook">
-        <header class="flex justify-between items-center mb-5">
+        <header class="flex justify-between items-center">
           <h2
             class="font-nexaheavy font-black text-lg text-gray-800 md:text-2xl"
           >
@@ -2182,19 +2586,25 @@
           >
         </header>
 
-        <div class="splide mt-10 max-w-[996px]" role="group" id="splide3">
+        <div class="splide mt-5 max-w-[996px]" role="group" id="splide3">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide">
+              <li class="splide__slide cursor-pointer">
                 <div class="single_block relative">
                   <div class="image">
                     <img src="./assets/src/img/game_img.png" alt="game image" />
                   </div>
-                  <img
-                    class="icon absolute top-2 left-2"
-                    src="./assets/src/img/sports_football.png"
-                    alt="football icon"
-                  />
+                  <div
+                    class="overlay_image absolute top-5 left-4 inline-flex items-center gap-1 font-roboto text-white"
+                  >
+                    <img
+                      class="icon"
+                      src="./assets/src/img/sports_football.png"
+                      alt="football icon"
+                    />
+                    <span class="text-white">NFL</span>
+                  </div>
+
                   <p class="date font-roboto text-sm text-slate-500 py-2">
                     Dec 8, 2022 • 13 min read
                   </p>
@@ -2206,16 +2616,21 @@
                   </h4>
                 </div>
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide cursor-pointer">
                 <div class="single_block relative">
                   <div class="image">
                     <img src="./assets/src/img/game_img.png" alt="game image" />
                   </div>
-                  <img
-                    class="icon absolute top-2 left-2"
-                    src="./assets/src/img/sports_football.png"
-                    alt="football icon"
-                  />
+                  <div
+                    class="overlay_image absolute top-5 left-4 inline-flex items-center gap-1 font-roboto text-white"
+                  >
+                    <img
+                      class="icon"
+                      src="./assets/src/img/sports_football.png"
+                      alt="football icon"
+                    />
+                    <span class="text-white">NFL</span>
+                  </div>
                   <p class="date font-roboto text-sm text-slate-500 py-2">
                     Dec 8, 2022 • 13 min read
                   </p>
@@ -2227,16 +2642,21 @@
                   </h4>
                 </div>
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide cursor-pointer">
                 <div class="single_block relative">
                   <div class="image">
                     <img src="./assets/src/img/game_img.png" alt="game image" />
                   </div>
-                  <img
-                    class="icon absolute top-2 left-2"
-                    src="./assets/src/img/sports_football.png"
-                    alt="football icon"
-                  />
+                  <div
+                    class="overlay_image absolute top-5 left-4 inline-flex items-center gap-1 font-roboto text-white"
+                  >
+                    <img
+                      class="icon"
+                      src="./assets/src/img/sports_football.png"
+                      alt="football icon"
+                    />
+                    <span class="text-white">NFL</span>
+                  </div>
                   <p class="date font-roboto text-sm text-slate-500 py-2">
                     Dec 8, 2022 • 13 min read
                   </p>

@@ -72,24 +72,21 @@
   }
 }
 
-.game_block .heading {
-  padding-right: 24px;
-  transition: padding-right 1s;
-  -moz-transition: padding-right 1s; /* Firefox */
-  -webkit-transition: padding-right 1s; /* Safari and Chrome */
-  -o-transition: padding-right 1s; /* Opera */
-}
-
-.game_block:hover .heading {
-  padding-right: 10px;
+.game_block .right_icon path {
+  transition: 0.3s ease-in;
 }
 
 .game_block:hover .right_icon path {
-  stroke: blue;
+  stroke: #0072eb;
+  transform: translateX(30%);
 }
 
 .selected-heading {
   color: #0072eb;
+}
+
+.selected-paragraph {
+  color: #282e38;
 }
 
 .selected-tab {
@@ -109,10 +106,16 @@
   }
 }
 
-.slider_section .tns-controls {
-  position: absolute;
-  top: 0;
-  right: 0;
+.splide__slide:hover h4 {
+  text-decoration: underline;
+}
+
+.single_slide .right_icon path {
+  transition: 0.2s ease-in;
+}
+.single_slide:hover .right_icon path {
+  stroke: #0072eb;
+  transform: translateX(10%);
 }
 
 /* CSS to hide scrollbar */
@@ -135,4 +138,42 @@
 
 .dropdown-terms:hover .dropdown-menu-terms {
   display: block;
+}
+
+.overlay_agent {
+  position: absolute;
+  left: 25%;
+  bottom: 50%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.live_agent_container:hover .overlay_agent {
+  animation: overlay_animation 2s forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overlay_animation {
+  from {
+    bottom: 50%;
+    opacity: 0;
+  }
+  to {
+    bottom: 80%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  @keyframes overlay_animation {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+    to {
+      bottom: 28%;
+      opacity: 1;
+    }
+  }
 }

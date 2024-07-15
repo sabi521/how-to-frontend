@@ -8,15 +8,16 @@
 
     <!-- REQUIRED // Load js and css files -->
     <script type="module" src="/main.js"></script>
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
   </head>
   <body>
     <header class="bg-blue-900 w-full h-16"></header>
     <!--  Search bar-->
-    <div class="bg-slate-800 border-t border-blue-900">
+    <div class="bg-[#172755] border-t border-[#2F4583]">
       <div class="search_bar max-w-[1430px] mx-auto py-6 px-3 xl:px-0">
         <p
           class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
@@ -48,15 +49,15 @@
         <div class="relative mt-10 max-w-xl mx-auto">
           <input
             class="border border-gray-800 rounded-full w-full py-3 px-3 text-gray-800 custom-input font-roboto"
-            id="search-input"
+            id="custom-search-input"
             type="text"
             placeholder="NFL betting"
           />
           <div class="absolute right-0 inset-y-0 flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              id="close-icon"
-              class="close-icon -ml-1 mr-3 h-5 w-5 icon-hidden"
+              id="custom-close-icon"
+              class="-ml-1 mr-3 h-5 w-5 hidden"
               width="24"
               height="25"
               viewBox="0 0 24 25"
@@ -71,10 +72,9 @@
               />
             </svg>
           </div>
-
           <div
             class="absolute left-5 inset-y-0 flex items-center"
-            id="search-icon"
+            id="custom-search-icon"
           >
             <svg
               width="24"
@@ -101,15 +101,17 @@
           </div>
         </div>
         <!--example-->
-        <div class="flex gap-4 items-center mt-6">
-          <p class="font-nexaregular text-slate-500">For example:</p>
+        <div class="flex gap-2 items-center mt-6 sm:gap-4">
+          <p class="font-nexaregular text-slate-500 text-sm sm:text-base">
+            For example:
+          </p>
           <a
             href="#"
-            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black"
+            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black text-sm sm:text-base"
             >Betting strategies</a
           >
           <a
-            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black"
+            class="block font-nexaheavy font-black text-neutral-800 border-b border-dashed border-black text-sm sm:text-base"
             href="#"
             >Super Bowl
           </a>
@@ -126,10 +128,14 @@
           >
             Explore resources
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+          <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:grid-cols-3">
             <div class="single_block border border-slate-200 rounded-xl pb-6">
               <div class="image mb-3">
-                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+                <img
+                  class="w-full rounded-t-xl"
+                  src="./assets/src/img/lr.png"
+                  alt="image"
+                />
               </div>
               <div class="content px-6 space-y-3">
                 <h5 class="font-nexaheavy font-black text-lg text-gray-800">
@@ -150,7 +156,11 @@
             </div>
             <div class="single_block border border-slate-200 rounded-xl pb-6">
               <div class="image mb-3">
-                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+                <img
+                  class="w-full rounded-t-xl"
+                  src="./assets/src/img/wg.png"
+                  alt="image"
+                />
               </div>
               <div class="content px-6 space-y-3">
                 <h5 class="font-nexaheavy font-black text-lg text-gray-800">
@@ -165,13 +175,17 @@
                 <a
                   class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
                   href="#"
-                  >Go to Locker Room</a
+                  >Go to The Wise Guy</a
                 >
               </div>
             </div>
             <div class="single_block border border-slate-200 rounded-xl pb-6">
               <div class="image mb-3">
-                <img class="w-full" src="./assets/src/img/lr.png" alt="image" />
+                <img
+                  class="w-full rounded-t-xl"
+                  src="./assets/src/img/btv.png"
+                  alt="image"
+                />
               </div>
               <div class="content px-6 space-y-3">
                 <h5 class="font-nexaheavy font-black text-lg text-gray-800">
@@ -186,7 +200,7 @@
                 <a
                   class="inline-block border border-gray-800 text-center px-4 py-1 rounded-full text-gray-800 font-nexaheavy font-black text-base"
                   href="#"
-                  >Go to Locker Room</a
+                  >Go to BetUS TV</a
                 >
               </div>
             </div>
@@ -195,6 +209,6 @@
       </section>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script></script>
   </body>
 </html>
