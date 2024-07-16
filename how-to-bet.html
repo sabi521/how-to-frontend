@@ -18,37 +18,75 @@
     <!--  Search bar-->
     <div class="bg-slate-800 border-t border-blue-900">
       <div
-        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-6 px-3 xl:px-0"
+        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-2 px-3 xl:px-0 md:py-2.5"
       >
         <p
-          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+          class="w-32 text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
         >
           How To Bet
         </p>
 
-        <form action="" class="max-w-[278px] px-4 text-white h-12">
+        <form
+          action=""
+          id="headerSearchForm"
+          class="w-full max-w-[278px] text-white h-10 block md:h-12 transition-all duration-300 ease-in-out"
+        >
           <div class="relative">
             <input
               type="text"
               name="q"
-              class="w-full border h-12 shadow p-4 rounded-[32px] bg-[#223466] border-slate-500"
+              id="headerSearchInput"
+              class="w-full display_input border h-10 shadow p-3 rounded-[32px] bg-[#223466] border-slate-500 focus:border-4 focus:border-[#4961A3] outline-none md:h-12 hidden transition-all duration-300 ease-in-out"
               placeholder="search"
             />
-            <button type="submit">
+            <button
+              type="button"
+              id="headerSearchBtn"
+              class="h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
               <svg
-                class="h-5 w-5 absolute top-3.5 right-3 fill-current"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                x="0px"
-                y="0px"
-                viewBox="0 0 56.966 56.966"
-                style="enable-background: new 0 0 56.966 56.966"
-                xml:space="preserve"
               >
                 <path
-                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-                ></path>
+                  d="M10.5423 19.25C15.3518 19.25 19.2507 15.3511 19.2507 10.5416C19.2507 5.73217 15.3518 1.83331 10.5423 1.83331C5.73284 1.83331 1.83398 5.73217 1.83398 10.5416C1.83398 15.3511 5.73284 19.25 10.5423 19.25Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.1673 20.1666L18.334 18.3333"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              id="headerCloseBtn"
+              class="hidden h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="#ffffff"
+              >
+                <path
+                  d="M18 18.2282L6 6.22827M18 6.22827L6 18.2283"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
           </div>
@@ -190,7 +228,7 @@
             >
               <a
                 href="#"
-                class="inline-flex items-center gap-2 font-nexaheavy font-black text-base text-neutral-800 border border-slate-400 rounded-full px-2 py-1"
+                class="inline-flex items-center gap-2 font-nexaheavy font-black text-base text-neutral-800 border border-slate-400 rounded-full px-3 py-1"
                 ><svg
                   width="14"
                   height="14"
@@ -473,31 +511,18 @@
             class="title w-full inline-flex items-center gap-2 py-4 border-b"
           >
             <svg
-              width="29"
-              height="29"
-              viewBox="0 0 29 29"
-              fill="none"
+              class="transition group-open:rotate-180"
               xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
             >
               <path
-                d="M20.5415 22.2694H15.7082L10.3311 25.8461C9.53357 26.3777 8.45817 25.8099 8.45817 24.8432V22.2694C4.83317 22.2694 2.4165 19.8528 2.4165 16.2278V8.9777C2.4165 5.3527 4.83317 2.93604 8.45817 2.93604H20.5415C24.1665 2.93604 26.5832 5.3527 26.5832 8.9777V16.2278C26.5832 19.8528 24.1665 22.2694 20.5415 22.2694Z"
-                stroke="#252A32"
-                stroke-width="2"
+                d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668"
+                stroke="#282E38"
+                stroke-width="1.5"
                 stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M14.4999 13.7266V13.4729C14.4999 12.6512 15.0075 12.2162 15.515 11.8658C16.0104 11.5274 16.5057 11.0924 16.5057 10.2949C16.5057 9.18327 15.6116 8.28906 14.4999 8.28906C13.3883 8.28906 12.4941 9.18327 12.4941 10.2949"
-                stroke="#252A32"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M14.4947 16.6144H14.5056"
-                stroke="#252A32"
-                stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
@@ -515,7 +540,6 @@
                   class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
                 >
                   <svg
-                    class="w-5 h-5 text-gray-500 transition group-open:rotate-180"
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -524,6 +548,48 @@
                   >
                     <path
                       d="M13.2802 10.0334L8.93355 5.68676C8.42021 5.17342 7.58021 5.17342 7.06688 5.68676L2.72021 10.0334"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span
+                    class="font-nexabold font-bold text-base leading-5 text-gray-800 md:text-lg"
+                    >What is the first step to start betting on sports?</span
+                  >
+                </summary>
+                <article
+                  class="pl-8 pb-4 font-roboto text-sm leading-5 text-gray-800 sm:px-12"
+                >
+                  <p>
+                    The first step to start betting on sports is to choose a
+                    reputable sportsbook. Look for one that is licensed and
+                    offers good customer support, a wide range of sports and
+                    betting options, competitive odds, and secure payment
+                    methods. Once you've chosen a sportsbook, you'll need to
+                    create an account, verify your identity, and deposit funds.
+                  </p>
+                </article>
+              </details>
+            </li>
+
+            <li>
+              <details class="group">
+                <summary
+                  class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
+                >
+                  <svg
+                    class="transition group-open:rotate-180"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668"
                       stroke="#282E38"
                       stroke-width="1.5"
                       stroke-miterlimit="10"
@@ -557,7 +623,7 @@
                   class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
                 >
                   <svg
-                    class="w-5 h-5 text-gray-500 transition group-open:rotate-180"
+                    class="transition group-open:rotate-180"
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -565,7 +631,7 @@
                     fill="none"
                   >
                     <path
-                      d="M13.2802 10.0334L8.93355 5.68676C8.42021 5.17342 7.58021 5.17342 7.06688 5.68676L2.72021 10.0334"
+                      d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668"
                       stroke="#282E38"
                       stroke-width="1.5"
                       stroke-miterlimit="10"
@@ -599,7 +665,7 @@
                   class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
                 >
                   <svg
-                    class="w-5 h-5 text-gray-500 transition group-open:rotate-180"
+                    class="transition group-open:rotate-180"
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -607,7 +673,7 @@
                     fill="none"
                   >
                     <path
-                      d="M13.2802 10.0334L8.93355 5.68676C8.42021 5.17342 7.58021 5.17342 7.06688 5.68676L2.72021 10.0334"
+                      d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668"
                       stroke="#282E38"
                       stroke-width="1.5"
                       stroke-miterlimit="10"
@@ -641,7 +707,7 @@
                   class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
                 >
                   <svg
-                    class="w-5 h-5 text-gray-500 transition group-open:rotate-180"
+                    class="transition group-open:rotate-180"
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -649,49 +715,7 @@
                     fill="none"
                   >
                     <path
-                      d="M13.2802 10.0334L8.93355 5.68676C8.42021 5.17342 7.58021 5.17342 7.06688 5.68676L2.72021 10.0334"
-                      stroke="#282E38"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span
-                    class="font-nexabold font-bold text-base leading-5 text-gray-800 md:text-lg"
-                    >What is the first step to start betting on sports?</span
-                  >
-                </summary>
-
-                <article
-                  class="pl-8 pb-4 font-roboto text-sm leading-5 text-gray-800 sm:px-12"
-                >
-                  <p>
-                    The first step to start betting on sports is to choose a
-                    reputable sportsbook. Look for one that is licensed and
-                    offers good customer support, a wide range of sports and
-                    betting options, competitive odds, and secure payment
-                    methods. Once you've chosen a sportsbook, you'll need to
-                    create an account, verify your identity, and deposit funds.
-                  </p>
-                </article>
-              </details>
-            </li>
-            <li>
-              <details class="group">
-                <summary
-                  class="flex items-center gap-3 px-0 py-3 font-medium marker:content-none hover:cursor-pointer sm:px-4"
-                >
-                  <svg
-                    class="w-5 h-5 text-gray-500 transition group-open:rotate-180"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M13.2802 10.0334L8.93355 5.68676C8.42021 5.17342 7.58021 5.17342 7.06688 5.68676L2.72021 10.0334"
+                      d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668"
                       stroke="#282E38"
                       stroke-width="1.5"
                       stroke-miterlimit="10"
@@ -759,7 +783,7 @@
             class="text-gray-800 font-nexaheavy font-black leading-5 text-lg flex flex-col gap-4 justify-between items-center md:text-2xl md:leading-7 md:flex-row"
           >
             <h4>Was it helpful?</h4>
-            <div class="flex gap-4 border rounded-md h-10 px-3">
+            <div class="flex gap-4 border rounded-md h-10 px-3 text-lg">
               <p class="inline-flex items-center gap-1">
                 <svg
                   width="21"
@@ -823,7 +847,7 @@
         <!--Previous/Next Article-->
         <div class="number_block my-10">
           <div
-            class="flex flex-col gap-4 justify-center items-center md:justify-between md:flex-row"
+            class="flex flex-col gap-4 justify-center items-center sm:justify-between sm:flex-row"
           >
             <a
               href=""
@@ -852,7 +876,7 @@
             </a>
             <a
               href=""
-              class="next_art w-full flex items-center gap-4 border border-slate-200 px-5 py-4 rounded-xl"
+              class="next_art w-full flex items-center justify-end gap-4 border border-slate-200 px-5 py-4 rounded-xl"
             >
               <div class="content">
                 <h6 class="text-gray-800 text-lg font-nexabold font-bold mb-2">

@@ -63,6 +63,10 @@
   src: url(../fonts/Ubuntu-Medium.ttf);
 }
 
+.display_input {
+  display: block !important;
+}
+
 .sport_specific:hover {
   h3 {
     color: #0072eb;
@@ -176,4 +180,21 @@
       opacity: 1;
     }
   }
+}
+
+#options_value {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  padding-right: 30px;
+  background-image: url("../img/arrow-select.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+.mob_options {
+  position: relative;
+}
+.opt_val {
+  width: 100%;
 }

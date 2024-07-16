@@ -18,37 +18,75 @@
     <!--  Search bar-->
     <div class="bg-slate-800 border-t border-blue-900">
       <div
-        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-6 px-3 xl:px-0"
+        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-2 px-3 xl:px-0 md:py-2.5"
       >
         <p
-          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+          class="w-32 text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
         >
           How To Bet
         </p>
 
-        <form action="" class="max-w-[278px] px-4 text-white h-12">
+        <form
+          action=""
+          id="headerSearchForm"
+          class="w-full max-w-[278px] text-white h-10 block md:h-12 transition-all duration-300 ease-in-out"
+        >
           <div class="relative">
             <input
               type="text"
               name="q"
-              class="w-full border h-12 shadow p-4 rounded-[32px] bg-[#223466] border-slate-500"
+              id="headerSearchInput"
+              class="w-full display_input border h-10 shadow p-3 rounded-[32px] bg-[#223466] border-slate-500 focus:border-4 focus:border-[#4961A3] outline-none md:h-12 hidden transition-all duration-300 ease-in-out"
               placeholder="search"
             />
-            <button type="submit">
+            <button
+              type="button"
+              id="headerSearchBtn"
+              class="h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
               <svg
-                class="h-5 w-5 absolute top-3.5 right-3 fill-current"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                x="0px"
-                y="0px"
-                viewBox="0 0 56.966 56.966"
-                style="enable-background: new 0 0 56.966 56.966"
-                xml:space="preserve"
               >
                 <path
-                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-                ></path>
+                  d="M10.5423 19.25C15.3518 19.25 19.2507 15.3511 19.2507 10.5416C19.2507 5.73217 15.3518 1.83331 10.5423 1.83331C5.73284 1.83331 1.83398 5.73217 1.83398 10.5416C1.83398 15.3511 5.73284 19.25 10.5423 19.25Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.1673 20.1666L18.334 18.3333"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              id="headerCloseBtn"
+              class="hidden h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="#ffffff"
+              >
+                <path
+                  d="M18 18.2282L6 6.22827M18 6.22827L6 18.2283"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
           </div>
@@ -63,9 +101,7 @@
           <div class="w-1/4 hidden xl:block"></div>
           <!--How to bet content container-->
           <div class="main_container max-w-[680px] mx-auto">
-            <div
-              class="title_bar capitalize flex flex-wrap gap-2 items-center px-3 lg:px-0"
-            >
+            <div class="title_bar capitalize flex flex-wrap gap-2 items-center">
               <a
                 href="#"
                 class="inline-flex items-center gap-2 font-nexaheavy font-black text-base text-neutral-800 border border-slate-400 rounded-full px-2 py-1"
@@ -126,7 +162,7 @@
 
                 <!-- Dropdown menu -->
                 <div
-                  class="z-10 dropdown-menu-terms absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                  class="z-10 dropdown-menu-terms absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow-5xl w-44"
                 >
                   <ul class="py-2 text-sm text-neutral-800 font-roboto">
                     <li>
@@ -172,15 +208,15 @@
 
             <div class="content mt-5">
               <h1
-                class="font-nexaheavy font-black text-gray-800 text-2xl leading-8 px-3 lg:px-0 md:leading-12 md:text-[40px]"
+                class="font-nexaheavy font-black text-gray-800 text-2xl leading-8 md:leading-12 md:text-[40px]"
               >
                 Terms
               </h1>
 
-              <div class="block w-full mt-4 xl:hidden">
+              <div class="block mob_options w-full mt-4 xl:hidden">
                 <select
-                  id="countries"
-                  class="h-12 font-roboto border border-slate-300 text-gray-800 text-base rounded-lg block w-full py-2.5 px-4 focus:outline-none"
+                  id="options_value"
+                  class="h-12 border border-slate-300 text-gray-800 text-base rounded-lg block w-full py-2.5 px-4 focus:outline-none"
                 >
                   <option
                     selected
@@ -196,9 +232,9 @@
                 </select>
               </div>
 
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   A
                 </h2>
@@ -231,9 +267,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   B
                 </h2>
@@ -260,9 +296,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   C
                 </h2>
@@ -356,9 +392,9 @@
           <!--How to bet content container-->
           <div class="main_container max-w-[680px] mx-auto">
             <div class="content mt-5">
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   G
                 </h2>
@@ -391,9 +427,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   H
                 </h2>
@@ -420,9 +456,9 @@
                   </p>
                 </div>
               </div>
-              <div class="mt-10 px-3 lg:px-0">
+              <div class="mt-6 md:mt-10">
                 <h2
-                  class="mb-6 font-nexaheavy font-black text-gray-800 text-2xl"
+                  class="mb-4 font-nexaheavy font-black text-gray-800 text-2xl"
                 >
                   I
                 </h2>
@@ -458,7 +494,7 @@
             </div>
 
             <!--Realted articles container for Mobile-->
-            <div class="related_articles mt-6 pl-4 block xl:hidden">
+            <div class="related_articles mt-6 block xl:hidden">
               <h4 class="font-nexaheavy font-black text-gray-800 mb-4">
                 Related Articles
               </h4>
@@ -540,7 +576,7 @@
                 class="text-gray-800 font-nexaheavy font-black leading-5 text-lg flex flex-col gap-4 justify-between items-center md:text-2xl md:leading-7 md:flex-row"
               >
                 <h4>Was it helpful?</h4>
-                <div class="flex gap-4 border rounded-md h-10 px-3">
+                <div class="flex gap-4 border rounded-md h-10 px-3 text-lg">
                   <p class="inline-flex items-center gap-1">
                     <svg
                       width="21"

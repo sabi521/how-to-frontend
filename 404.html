@@ -17,13 +17,81 @@
   <body>
     <header class="bg-blue-900 w-full h-16"></header>
     <!--  Search bar-->
-    <div class="bg-[#172755] border-t border-[#2F4583]">
-      <div class="search_bar max-w-[1430px] mx-auto py-6 px-3 xl:px-0">
+    <div class="bg-slate-800 border-t border-blue-900">
+      <div
+        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-2 px-3 xl:px-0 md:py-2.5"
+      >
         <p
-          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+          class="w-32 text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
         >
           How To Bet
         </p>
+
+        <form
+          action=""
+          id="headerSearchForm"
+          class="w-full max-w-[278px] text-white h-10 block md:h-12 transition-all duration-300 ease-in-out md:hidden"
+        >
+          <div class="relative">
+            <input
+              type="text"
+              name="q"
+              id="headerSearchInput"
+              class="w-full border h-10 shadow p-3 rounded-[32px] bg-[#223466] border-slate-500 focus:border-4 focus:border-[#4961A3] outline-none md:h-12 transition-all duration-300 ease-in-out hidden"
+              placeholder="search"
+            />
+            <button
+              type="button"
+              id="headerSearchBtn"
+              class="h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5423 19.25C15.3518 19.25 19.2507 15.3511 19.2507 10.5416C19.2507 5.73217 15.3518 1.83331 10.5423 1.83331C5.73284 1.83331 1.83398 5.73217 1.83398 10.5416C1.83398 15.3511 5.73284 19.25 10.5423 19.25Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.1673 20.1666L18.334 18.3333"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              id="headerCloseBtn"
+              class="hidden h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="#ffffff"
+              >
+                <path
+                  d="M18 18.2282L6 6.22827M18 6.22827L6 18.2283"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -101,7 +169,7 @@
           </div>
         </div>
         <!--example-->
-        <div class="flex gap-2 items-center mt-6 sm:gap-4">
+        <div class="flex gap-2 items-center mt-1 sm:gap-4">
           <p class="font-nexaregular text-slate-500 text-sm sm:text-base">
             For example:
           </p>

@@ -8,25 +8,85 @@
 
     <!-- REQUIRED // Load js and css files -->
     <script type="module" src="/main.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
-    />
   </head>
   <body>
     <header class="bg-blue-900 w-full h-16"></header>
     <!--  Search bar-->
     <div class="bg-slate-800 border-t border-blue-900">
-      <div class="search_bar max-w-[1430px] mx-auto py-6 px-3 xl:px-0">
+      <div
+        class="search_bar max-w-[1430px] mx-auto flex justify-between items-center py-2 px-3 xl:px-0 md:py-2.5"
+      >
         <p
-          class="text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
+          class="w-32 text-white font-kommissarCondensed font-medium text-2xl md:text-3xl"
         >
           How To Bet
         </p>
+
+        <form
+          action=""
+          id="headerSearchForm"
+          class="w-full max-w-[278px] text-white h-10 block md:h-12 transition-all duration-300 ease-in-out md:hidden"
+        >
+          <div class="relative">
+            <input
+              type="text"
+              name="q"
+              id="headerSearchInput"
+              class="w-full border h-10 shadow p-3 rounded-[32px] bg-[#223466] border-slate-500 focus:border-4 focus:border-[#4961A3] outline-none md:h-12 transition-all duration-300 ease-in-out hidden"
+              placeholder="search"
+            />
+            <button
+              type="button"
+              id="headerSearchBtn"
+              class="h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5423 19.25C15.3518 19.25 19.2507 15.3511 19.2507 10.5416C19.2507 5.73217 15.3518 1.83331 10.5423 1.83331C5.73284 1.83331 1.83398 5.73217 1.83398 10.5416C1.83398 15.3511 5.73284 19.25 10.5423 19.25Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M20.1673 20.1666L18.334 18.3333"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              id="headerCloseBtn"
+              class="hidden h-5 w-5 absolute top-2 right-5 md:top-3.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="#ffffff"
+              >
+                <path
+                  d="M18 18.2282L6 6.22827M18 6.22827L6 18.2283"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -117,15 +177,15 @@
               <div class="relative mt-6">
                 <input
                   class="border border-gray-800 rounded-full w-full py-3 px-3 text-gray-800 custom-input font-roboto"
-                  id="search-input"
+                  id="custom-search-input"
                   type="text"
                   placeholder="NFL betting"
                 />
                 <div class="absolute right-0 inset-y-0 flex items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    id="close-icon"
-                    class="close-icon -ml-1 mr-3 h-5 w-5 icon-hidden"
+                    id="custom-close-icon"
+                    class="-ml-1 mr-3 h-5 w-5 hidden"
                     width="24"
                     height="25"
                     viewBox="0 0 24 25"
@@ -140,10 +200,9 @@
                     />
                   </svg>
                 </div>
-
                 <div
                   class="absolute left-5 inset-y-0 flex items-center"
-                  id="search-icon"
+                  id="custom-search-icon"
                 >
                   <svg
                     width="24"
@@ -176,7 +235,7 @@
               >
                 <a
                   href="#"
-                  class="block active:underline text-neutral-800 hover:border-b-2 hover:border-neutral-800"
+                  class="block active:underline text-neutral-800 border-b-2 border-neutral-800"
                   >Search by Keyword</a
                 >
                 <a
@@ -893,8 +952,8 @@
                   </div>
                 </div>
 
-                <!--Pagination-->
-                <nav aria-label="Page navigation " class="font-roboto my-8">
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="font-roboto my-8">
                   <ul
                     class="list-style-none flex justify-center lg:justify-start"
                   >
@@ -902,7 +961,8 @@
                       <a
                         class="relative flex items-center gap-1 rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-neutral-100 focus:bg-neutral-100 hover:text-blue-600 focus:text-blue-600 focus:outline-none active:bg-neutral-100 active:text-blue-600 icon-hover"
                         href="#"
-                        ><svg
+                      >
+                        <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="17"
                           height="16"
@@ -916,27 +976,30 @@
                             fill="#4B5567"
                           />
                         </svg>
-                        <span>Previous</span></a
+                        <span>Previous</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="page-link relative block rounded bg-blue-600 px-3 py-1.5 text-sm text-white transition duration-300"
+                        href="#"
+                        data-page="1"
+                        >1</a
                       >
                     </li>
                     <li>
                       <a
-                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
+                        class="page-link relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
                         href="#"
-                        >1</a
-                      >
-                    </li>
-                    <li aria-current="page">
-                      <a
-                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
-                        href="#"
+                        data-page="2"
                         >2</a
                       >
                     </li>
                     <li>
                       <a
-                        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
+                        class="page-link relative block rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-blue-600 focus:bg-blue-600 hover:text-white focus:text-white focus:outline-none active:text-white"
                         href="#"
+                        data-page="3"
                         >3</a
                       >
                     </li>
@@ -944,7 +1007,8 @@
                       <a
                         class="relative flex items-center gap-1 rounded bg-transparent px-3 py-1.5 text-sm text-surface transition duration-300 hover:bg-neutral-100 focus:bg-neutral-100 hover:text-blue-600 focus:text-blue-600 focus:outline-none active:bg-neutral-100 active:text-blue-600 icon-hover"
                         href="#"
-                        ><span>Next</span>
+                      >
+                        <span>Next</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="17"
@@ -957,8 +1021,9 @@
                             clip-rule="evenodd"
                             d="M6.71967 3.21967C7.01256 2.92678 7.48744 2.92678 7.78033 3.21967L12.0303 7.46967C12.3232 7.76256 12.3232 8.23744 12.0303 8.53033L7.78033 12.7803C7.48744 13.0732 7.01256 13.0732 6.71967 12.7803C6.42678 12.4874 6.42678 12.0126 6.71967 11.7197L10.4393 8L6.71967 4.28033C6.42678 3.98744 6.42678 3.51256 6.71967 3.21967Z"
                             fill="#4B5567"
-                          /></svg
-                      ></a>
+                          />
+                        </svg>
+                      </a>
                     </li>
                   </ul>
                 </nav>
@@ -974,7 +1039,35 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+      // JavaScript to manage the active state of pagination links
+      document.querySelectorAll(".page-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          // Remove active state from all links
+          document.querySelectorAll(".page-link").forEach((link) => {
+            link.classList.remove("bg-blue-600", "text-white");
+            link.classList.add(
+              "bg-transparent",
+              "text-surface",
+              "hover:bg-blue-600",
+              "hover:text-white",
+              "focus:bg-blue-600",
+              "focus:text-white"
+            );
+          });
+          // Add active state to the clicked link
+          this.classList.remove(
+            "bg-transparent",
+            "text-surface",
+            "hover:bg-blue-600",
+            "hover:text-white",
+            "focus:bg-blue-600",
+            "focus:text-white"
+          );
+          this.classList.add("bg-blue-600", "text-white");
+        });
+      });
+    </script>
   </body>
 </html>
