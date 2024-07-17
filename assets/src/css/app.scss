@@ -198,3 +198,8 @@
 .opt_val {
   width: 100%;
 }
+
+.option.selected {
+  border-left-color: #007bff;
+  color: #282e38;
+}

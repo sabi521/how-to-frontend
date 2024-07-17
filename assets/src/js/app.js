@@ -254,4 +254,22 @@ domReady(() => {
       dropdownMenu.classList.toggle("hidden");
     });
   }
+
+  /**
+   * Dropdown options desktop terms page
+   */
+
+  const options = document.querySelectorAll(".option");
+
+  if (options.length > 0) {
+    options.forEach((option) => {
+      option.addEventListener("click", function () {
+        // Remove 'selected' class from all options
+        options.forEach((opt) => opt.classList.remove("selected"));
+
+        // Add 'selected' class to the clicked option
+        this.classList.add("selected");
+      });
+    });
+  }
 });
