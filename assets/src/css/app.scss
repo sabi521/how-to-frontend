@@ -215,3 +215,18 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+/**
+Burger Menu for mobile on how to bet page 
+**/
+
+@media (max-width: 1280px) {
+  .bet_menu {
+    left: -401px;
+    transition: left 1s;
+  }
+
+  .bet_menu.show {
+    left: 0px;
+  }
+}

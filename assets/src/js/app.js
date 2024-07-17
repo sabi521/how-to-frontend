@@ -244,7 +244,7 @@ domReady(() => {
   }
 
   /**
-   * Dropdown menu
+   * Dropdown menu for agent
    */
   const dropdownBtn = document.querySelector(".agent_dropdown_btn");
   const dropdownMenu = document.getElementById("agentDropdown");
@@ -289,4 +289,21 @@ domReady(() => {
       });
     }
   });
+
+  /**
+   * Burger icon for terms page show hide menu for mobile
+   */
+
+  let bet_menu = document.querySelector(".bet_menu");
+  let close_bet_menu = document.querySelector(".close_term_icon");
+
+  if (bet_menu) {
+    document.getElementById("term_burger").addEventListener("click", () => {
+      bet_menu.classList.add("show");
+    });
+
+    close_bet_menu.addEventListener("click", () => {
+      bet_menu.classList.remove("show");
+    });
+  }
 });
