@@ -98,16 +98,20 @@
     <div class="page_content">
       <div class="page_inner_container max-w-[1430px] mx-auto">
         <div class="flex flex-col gap-6 mt-5 xl:flex-row xl:gap-24">
-          <div class="bet_menu max-w-[278px] hidden xl:block">
+          <div class="bet_menu max-w-[316px] relative">
             <!-- component -->
-            <div class="bg-white min-h-sceen">
+            <div
+              class="min-h-screen w-full bg-white shadow-6xl border-r border-slate-200 absolute z-20 xl:relative xl:border-none xl:shadow-none"
+            >
               <div class="">
-                <h2 class="font-nexaheavy font-black text-2xl">
+                <h2
+                  class="font-nexaheavy font-black text-lg pt-8 pl-4 xl:text-2xl xl:pt-0 xl:pl-0"
+                >
                   Bets Types & Odds
                 </h2>
               </div>
               <div
-                class="grid mt-4 border border-slate-200 rounded-xl pt-5 px-4"
+                class="grid mt-4 xl:border xl:border-slate-200 xl:rounded-xl pt-5 px-4"
               >
                 <div class="pb-5">
                   <details class="group" open>
@@ -135,13 +139,33 @@
                       </span>
                     </summary>
                     <ul
-                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2"
+                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2 text-sm xl:text-base"
                     >
-                      <li>Understanding Point Spread</li>
-                      <li>Accumulator Bets Explained</li>
-                      <li>Over/Under Betting Essentials</li>
-                      <li>Moneyline Betting Simplified</li>
-                      <li>What Every Bettor Should Know</li>
+                      <li class="bg-[#E0F3FF] rounded">
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Understanding Point Spread</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Accumulator Bets Explained</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Over/Under Betting Essentials</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Moneyline Betting Simplified</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >What Every Bettor Should Know</a
+                        >
+                      </li>
                     </ul>
                   </details>
                 </div>
@@ -171,13 +195,33 @@
                       </span>
                     </summary>
                     <ul
-                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2"
+                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2 text-sm xl:text-base"
                     >
-                      <li>Understanding Point Spread</li>
-                      <li>Accumulator Bets Explained</li>
-                      <li>Over/Under Betting Essentials</li>
-                      <li>Moneyline Betting Simplified</li>
-                      <li>What Every Bettor Should Know</li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Understanding Point Spread</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Accumulator Bets Explained</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Over/Under Betting Essentials</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Moneyline Betting Simplified</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >What Every Bettor Should Know</a
+                        >
+                      </li>
                     </ul>
                   </details>
                 </div>
@@ -207,29 +251,57 @@
                       </span>
                     </summary>
                     <ul
-                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2"
+                      class="text-gray-800 font-roboto mt-3 group-open:animate-fadeIn space-y-2 text-sm xl:text-base"
                     >
-                      <li>Understanding Point Spread</li>
-                      <li>Accumulator Bets Explained</li>
-                      <li>Over/Under Betting Essentials</li>
-                      <li>Moneyline Betting Simplified</li>
-                      <li>What Every Bettor Should Know</li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Understanding Point Spread</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Accumulator Bets Explained</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Over/Under Betting Essentials</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >Moneyline Betting Simplified</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#" class="cursor-pointer pl-2"
+                          >What Every Bettor Should Know</a
+                        >
+                      </li>
                     </ul>
                   </details>
                 </div>
               </div>
+            </div>
+
+            <div class="close_term_icon absolute z-30 -right-12">
+              <img src="./assets/src/img/term_close_icon.png" alt="" />
             </div>
           </div>
 
           <!--How to bet content container-->
           <section class="main_container max-w-[680px] mx-auto">
             <div
-              class="title_bar capitalize flex flex-wrap gap-2 items-center px-3 lg:px-0"
+              class="title_bar capitalize flex flex-wrap gap-2.5 items-center px-3 lg:px-0"
             >
+              <div class="burger_icon_terms block xl:hidden" id="term_burger">
+                <img src="./assets/src/img/burger_icon.png" alt="" />
+              </div>
               <a
                 href="#"
-                class="inline-flex items-center gap-2 font-nexaheavy font-black text-base text-neutral-800 border border-slate-400 rounded-full px-3 py-1"
+                class="inline-flex items-center gap-2 font-roboto font-normal text-base text-neutral-800 xl:border-slate-400 rounded-full px-0 py-0 xl:border xl:px-3 xl:py-1 xl:font-nexaheavy xl:font-black"
                 ><svg
+                  class="hidden xl:block"
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
@@ -295,7 +367,7 @@
                       >
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 border-b"
+                      <a href="#" class="block px-4 py-2 border-b font-bold"
                         >Bet Types & Odds</a
                       >
                     </li>
@@ -338,6 +410,64 @@
               >
                 Understanding Point Spread
               </h1>
+
+              <!--In this article mobile component-->
+              <div class="mt-4 article_links_page block px-3 lg:px-0 xl:hidden">
+                <div
+                  class="font-roboto text-base bg-gray-50 border border-slate-300 text-slate-500 rounded-xl block w-full"
+                >
+                  <div
+                    class="text-gray-800 font-nexaheavy font-black pt-2 pb-2 px-2.5 flex justify-between items-center cursor-pointer toggleDivBtn"
+                  >
+                    <span>In this article</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.2797 6.46667L8.93306 10.8133C8.41973 11.3267 7.57973 11.3267 7.06639 10.8133L2.71973 6.46667"
+                        stroke="#282E38"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="toggleDiv">
+                    <div class="space-y-3 py-2.5 border-t">
+                      <a
+                        href="#"
+                        class="block px-2.5 border-l-[3px] border-transparent option selected"
+                        >A-E</a
+                      >
+                      <a
+                        href="#"
+                        class="block px-2.5 border-l-[3px] border-transparent option"
+                        >F-J</a
+                      >
+                      <a
+                        href="#"
+                        class="block px-2.5 border-l-[3px] border-transparent option"
+                        >K-O</a
+                      >
+                      <a
+                        href="#"
+                        class="block px-2.5 border-l-[3px] border-transparent option"
+                        >P-T</a
+                      >
+                      <a
+                        href="#"
+                        class="block px-2.5 border-l-[3px] border-transparent option"
+                        >U-Z</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
               <video class="h-full w-full rounded-lg my-10" controls>
                 <source
                   src="https://docs.material-tailwind.com/demo.mp4"
@@ -381,9 +511,36 @@
             </div>
           </section>
 
+          <style>
+            @media (max-width: 1280px) {
+              .bet_menu {
+                left: -401px;
+                transition: left 1s;
+              }
+
+              .bet_menu.show {
+                left: 0px;
+              }
+            }
+          </style>
+
+          <script>
+            let bet_menu = document.querySelector(".bet_menu");
+            let close_bet_menu = document.querySelector(".close_term_icon");
+            document
+              .getElementById("term_burger")
+              .addEventListener("click", () => {
+                bet_menu.classList.add("show");
+              });
+
+            close_bet_menu.addEventListener("click", () => {
+              bet_menu.classList.remove("show");
+            });
+          </script>
+
           <!--Realted articles container for Desktop-->
-          <div class="related_articles_container max-w-[278px] hidden xl:block">
-            <div class="related_articles">
+          <div class="related_articles_container hidden xl:block">
+            <div class="related_articles max-w-[278px]">
               <h4 class="font-nexaheavy font-black text-gray-800 mb-4">
                 Related Articles
               </h4>
@@ -400,6 +557,67 @@
                   >
                 </li>
               </ul>
+            </div>
+
+            <!--In this article-->
+            <div
+              class="mt-96 article_links_page fixed bottom-10 max-w-[180px] w-full 2xl:max-w-[320px]"
+            >
+              <div
+                class="font-roboto text-base bg-gray-50 border border-slate-300 text-slate-500 rounded-xl block w-full"
+              >
+                <div class="toggleDiv">
+                  <div class="space-y-3 py-2.5 border-b">
+                    <a
+                      href="#"
+                      class="block px-2.5 border-l-[3px] border-transparent option selected"
+                      >A-E</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-2.5 border-l-[3px] border-transparent option"
+                      >F-J</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-2.5 border-l-[3px] border-transparent option"
+                      >K-O</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-2.5 border-l-[3px] border-transparent option"
+                      >P-T</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-2.5 border-l-[3px] border-transparent option"
+                      >U-Z</a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="text-gray-800 font-nexaheavy font-black pt-2 pb-2 px-2.5 flex justify-between items-center cursor-pointer toggleDivBtn"
+                >
+                  <span>In this article</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M13.2797 6.46667L8.93306 10.8133C8.41973 11.3267 7.57973 11.3267 7.06639 10.8133L2.71973 6.46667"
+                      stroke="#282E38"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -203,3 +203,15 @@
   border-left-color: #007bff;
   color: #282e38;
 }
+
+.toggleDiv {
+  transition: opacity 0.1s ease-in-out;
+}
+
+.toggleDiv.hidden_div {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

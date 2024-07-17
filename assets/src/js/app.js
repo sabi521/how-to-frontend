@@ -259,17 +259,34 @@ domReady(() => {
    * Dropdown options desktop terms page
    */
 
-  const options = document.querySelectorAll(".option");
+  // Get all instances of toggleDiv and toggleDivBtn
+  const toggleContainers = document.querySelectorAll(".article_links_page");
 
-  if (options.length > 0) {
-    options.forEach((option) => {
-      option.addEventListener("click", function () {
-        // Remove 'selected' class from all options
-        options.forEach((opt) => opt.classList.remove("selected"));
+  toggleContainers.forEach((container) => {
+    const toggleDiv = container.querySelector(".toggleDiv");
+    const toggleDivBtn = container.querySelector(".toggleDivBtn");
+    const options = container.querySelectorAll(".option");
 
-        // Add 'selected' class to the clicked option
-        this.classList.add("selected");
+    // Initially hide toggleDiv content
+    toggleDiv.classList.add("hidden_div");
+
+    if (options.length > 0) {
+      options.forEach((option) => {
+        option.addEventListener("click", function () {
+          // Remove 'selected' class from all options within this container
+          options.forEach((opt) => opt.classList.remove("selected"));
+
+          // Add 'selected' class to the clicked option within this container
+          this.classList.add("selected");
+        });
       });
-    });
-  }
+    }
+
+    if (toggleDiv && toggleDivBtn) {
+      toggleDivBtn.addEventListener("click", function () {
+        // Toggle the 'hidden_div' class on this toggleDiv instance
+        toggleDiv.classList.toggle("hidden_div");
+      });
+    }
+  });
 });
