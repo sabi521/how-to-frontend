@@ -2435,17 +2435,21 @@
 
     <!--Reach out to Live agent section-->
     <section
-      class="live_agent_section bg-blue-950 w-full py-10 mt-16 px-3 lg:px-0"
+      class="live_agent_section w-full py-10 mt-16 px-3 lg:px-0 bg-[url('/assets/src/img/client_bg_mobile.png')] sm:bg-[url('/assets/src/img/client_bg.png')]"
     >
       <div
         class="live_agent_container relative bg-white rounded-2xl border-slate-200 max-w-[728px] mx-auto flex flex-col items-center gap-10 pt-1 pb-8 sm:p-0 sm:flex-row"
       >
-        <div class="agent_image w-full sm:max-w-[234px]">
-          <img
-            class="w-full object-cover"
-            src="./assets/src/img/video.png"
-            alt=""
-          />
+        <div
+          class="agent_video w-full h-[228px] sm:max-w-[234px] p-1 flex justify-center items-center"
+        >
+          <video
+            class="h-full object-cover rounded-2xl"
+            src="./assets/src/img/video.mp4"
+            controls
+            muted
+            autoplay
+          ></video>
         </div>
         <div class="content">
           <p class="font-nexaregular text-slate-500">Instatnt Assistance:</p>

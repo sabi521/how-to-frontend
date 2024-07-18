@@ -85,6 +85,10 @@
   transform: translateX(30%);
 }
 
+.tab:hover h3 {
+  color: #0072eb;
+}
+
 .selected-heading {
   color: #0072eb;
 }
@@ -120,6 +124,20 @@
 .single_slide:hover .right_icon path {
   stroke: #0072eb;
   transform: translateX(10%);
+}
+
+/** agent video css **/
+
+.agent_video video::-internal-media-controls {
+  display: none;
+}
+
+.agent_video video::-webkit-media-controls {
+  display: none;
+}
+
+.agent_video video::-moz-media-controls {
+  display: none;
 }
 
 /* CSS to hide scrollbar */
@@ -205,7 +223,7 @@
 }
 
 .toggleDiv {
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.2s ease-in-out, height 0.1s ease-in-out;
 }
 
 .toggleDiv.hidden_div {
